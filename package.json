@@ -1,0 +1,218 @@
+{
+  "name": "sarif-atlas",
+  "displayName": "SARIF Atlas",
+  "description": "SARIF files from code scanners and linters: summary, results by file, top rules. Pro: new results against a baseline and a suppression audit. Works offline.",
+  "version": "0.1.0",
+  "publisher": "SmallStepsStudio",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "icon": "media/icon.png",
+  "pricing": "Trial",
+  "homepage": "https://github.com/small-steps-studio/sarif-atlas#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/small-steps-studio/sarif-atlas"
+  },
+  "bugs": {
+    "url": "https://github.com/small-steps-studio/sarif-atlas/issues"
+  },
+  "galleryBanner": {
+    "color": "#2b2338",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Other",
+    "Linters"
+  ],
+  "keywords": [
+    "sarif",
+    "sarif viewer",
+    "sarif report",
+    "sarif 2.1.0",
+    "static analysis",
+    "code scanning",
+    "security scan",
+    "sast",
+    "linter results",
+    "scan results",
+    "baseline",
+    "new findings",
+    "suppressions",
+    "code quality",
+    "rules",
+    "findings",
+    "audit",
+    "security review",
+    "eslint sarif",
+    "results by file",
+    "offline",
+    "markdown report"
+  ],
+  "main": "./src/extension.js",
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": true
+  },
+  "activationEvents": [],
+  "scripts": {
+    "test": "node scripts/run-tests.js",
+    "gate": "node scripts/release-gate.js",
+    "vscode:prepublish": "node scripts/release-gate.js --skip-tests",
+    "package": "npx --yes @vscode/vsce package --no-dependencies",
+    "package:local": "node scripts/package-local.js",
+    "check-vsix": "node scripts/check-vsix.js"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "sarifAtlas.showSummary",
+        "title": "SARIF Atlas: Show Summary",
+        "icon": "$(checklist)"
+      },
+      {
+        "command": "sarifAtlas.showResultsByFile",
+        "title": "SARIF Atlas: Show Results By File"
+      },
+      {
+        "command": "sarifAtlas.showTopRules",
+        "title": "SARIF Atlas: Show Top Rules"
+      },
+      {
+        "command": "sarifAtlas.showNewResults",
+        "title": "SARIF Atlas: Show New Results (Pro)"
+      },
+      {
+        "command": "sarifAtlas.showSuppressions",
+        "title": "SARIF Atlas: Show Suppression Audit (Pro)"
+      },
+      {
+        "command": "sarifAtlas.openSample",
+        "title": "SARIF Atlas: Open Sample File"
+      },
+      {
+        "command": "sarifAtlas.openWalkthrough",
+        "title": "SARIF Atlas: Open Walkthrough"
+      },
+      {
+        "command": "sarifAtlas.showDocumentation",
+        "title": "SARIF Atlas: Show Documentation"
+      },
+      {
+        "command": "sarifAtlas.reportProblem",
+        "title": "SARIF Atlas: Report A Problem"
+      },
+      {
+        "command": "sarifAtlas.buyPro",
+        "title": "SARIF Atlas: Buy Pro"
+      },
+      {
+        "command": "sarifAtlas.enterKey",
+        "title": "SARIF Atlas: Enter Licence Key"
+      },
+      {
+        "command": "sarifAtlas.licenceStatus",
+        "title": "SARIF Atlas: Show Licence Status"
+      },
+      {
+        "command": "sarifAtlas.removeLicence",
+        "title": "SARIF Atlas: Remove Licence From This Machine"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "sarifAtlas.showSummary",
+          "when": "resourceExtname == .sarif || resourceFilename =~ /\\.sarif\\.json$/",
+          "group": "navigation@90"
+        }
+      ]
+    },
+    "walkthroughs": [
+      {
+        "id": "gettingStarted",
+        "title": "Get started with SARIF Atlas",
+        "description": "Open a sample SARIF file, see its summary, results by file and top rules, and try the Pro new-results report and suppression audit in the free 14-day trial.",
+        "steps": [
+          {
+            "id": "sarifAtlas.step.openSample",
+            "title": "Open a sample file",
+            "description": "SARIF Atlas reads SARIF files: the JSON results format that code scanners, security tools and linters write. The sample is an invented scan of a web shop by two tools, with baseline states and suppressions, so every report has something to show. Open it to follow along, or open a SARIF file of your own.\n[Open Sample File](command:sarifAtlas.openSample)",
+            "media": {
+              "markdown": "media/walkthrough/open-sample.md"
+            },
+            "completionEvents": [
+              "onCommand:sarifAtlas.openSample"
+            ]
+          },
+          {
+            "id": "sarifAtlas.step.free",
+            "title": "Run Show Summary",
+            "description": "The log at a glance: results per level, the tools and versions that produced them, suppressed results and how many rules fired. The report opens as a new Markdown document; your file is not changed.\n[Show Summary](command:sarifAtlas.showSummary)",
+            "media": {
+              "markdown": "media/walkthrough/free.md"
+            },
+            "completionEvents": [
+              "onCommand:sarifAtlas.showSummary"
+            ]
+          },
+          {
+            "id": "sarifAtlas.step.more",
+            "title": "Use the other free reports",
+            "description": "Every free report works without a key, an account or a network connection: Show Results By File, Show Top Rules.\n[Show Results By File](command:sarifAtlas.showResultsByFile)\n[Show Top Rules](command:sarifAtlas.showTopRules)",
+            "media": {
+              "markdown": "media/walkthrough/more.md"
+            },
+            "completionEvents": [
+              "onCommand:sarifAtlas.showResultsByFile",
+              "onCommand:sarifAtlas.showTopRules"
+            ]
+          },
+          {
+            "id": "sarifAtlas.step.pro",
+            "title": "Try Pro free for 14 days",
+            "description": "The first Pro command you run starts a free 14-day trial on this computer, with no key and no network: Show New Results, Show Suppression Audit.\n[Show New Results](command:sarifAtlas.showNewResults)",
+            "media": {
+              "markdown": "media/walkthrough/pro.md"
+            },
+            "completionEvents": [
+              "onCommand:sarifAtlas.showNewResults",
+              "onCommand:sarifAtlas.showSuppressions"
+            ]
+          },
+          {
+            "id": "sarifAtlas.step.licence",
+            "title": "Licence and help",
+            "description": "Buy Pro (Personal USD 19, Business USD 39 per user), enter a key, see the licence status, or report a problem.\n[Show Licence Status](command:sarifAtlas.licenceStatus)\n[Report A Problem](command:sarifAtlas.reportProblem)",
+            "media": {
+              "markdown": "media/walkthrough/licence.md"
+            },
+            "completionEvents": [
+              "onCommand:sarifAtlas.licenceStatus"
+            ]
+          }
+        ]
+      }
+    ],
+    "configuration": {
+      "title": "SARIF Atlas",
+      "properties": {
+        "sarifAtlas.maxFileSizeMB": {
+          "type": "number",
+          "default": 50,
+          "minimum": 0.1,
+          "maximum": 50,
+          "markdownDescription": "Largest file (in MB) a report reads, up to 50 MB (VS Code passes files only up to 50 MB to extensions). Larger files are refused with a message."
+        },
+        "sarifAtlas.openReportsAsPreview": {
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Open each report in the Markdown preview as well as in a new editor."
+        }
+      }
+    }
+  }
+}
