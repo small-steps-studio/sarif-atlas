@@ -1,0 +1,716 @@
+{
+ "01-log-0.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n23 results from 1 run (Example Analyzer 2.2.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 2 |\n| warning | 13 |\n| note | 3 |\n| none | 4 |\n\n1 suppressed result.\n\n7 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/legacy/report\\_builder.cs | 0 | 2 | 2 | 6 |\n| web/views/cart.html | 0 | 4 | 0 | 5 |\n| lib/db/query.py | 1 | 3 | 0 | 4 |\n| scripts/deploy.sh | 0 | 2 | 0 | 2 |\n| src/api/orders.ts | 0 | 2 | 0 | 2 |\n| src/util.js | 1 | 0 | 0 | 2 |\n| src/app.js | 0 | 0 | 1 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 | NoEval | warning | 4 | Avoid eval |\n| EX005 | WeakHash | warning | 4 | Weak hash algorithm |\n| EX007 | MissingCsrf | warning | 4 | Form without CSRF token |\n| EX008 | Todo | warning | 4 | Leftover TODO comment |\n| EX002 | UnusedVar | warning | 3 | Unused variable |\n| EX006 | HardcodedSecret | warning | 2 | Hard-coded credential |\n| EX004 | SqlConcat | warning | 1 | SQL built by string concatenation |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n6 new results.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| warning | EX005 | src/legacy/report\\_builder.cs:257 | weak hash algorithm here |\n| warning | EX007 | scripts/deploy.sh:370 | form without csrf token here |\n| none | EX008 | src/legacy/report\\_builder.cs:167 | leftover todo comment here |\n| note | EX002 | src/legacy/report\\_builder.cs:362 | unused variable here |\n| warning | EX001 | web/views/cart.html:71 | avoid eval here |\n| warning | EX002 | src/api/orders.ts:314 | unused variable here |\n\n6 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n1 suppressed result.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX007 | src/util.js:346 | external | rejected | test data only |\n| EX006 | web/views/cart.html:66 | external | rejected | kept for API compatibility |\n| EX008 | lib/db/query.py:320 | inSource | accepted |  |"
+  }
+ },
+ "02-log-1.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n10 results from 1 run (Example Analyzer 2.3.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 5 |\n| warning | 2 |\n| note | 3 |\n\n0 suppressed results.\n\n5 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| lib/db/query.py | 2 | 0 | 1 | 3 |\n| src/app.js | 1 | 1 | 1 | 3 |\n| src/legacy/report\\_builder.cs | 0 | 1 | 1 | 2 |\n| cmd/server/main.go | 1 | 0 | 0 | 1 |\n| scripts/deploy.sh | 1 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX004 | SqlConcat | error | 4 | SQL built by string concatenation |\n| EX005 | WeakHash | warning | 3 | Weak hash algorithm |\n| EX001 | NoEval | error | 1 | Avoid eval |\n| EX002 | UnusedVar | note | 1 | Unused variable |\n| EX003 | LongLine | warning | 1 | Line too long |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "03-log-2.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n30 results from 1 run (Example Analyzer 2.5.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 9 |\n| warning | 7 |\n| note | 7 |\n| none | 7 |\n\n0 suppressed results.\n\n8 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/legacy/report\\_builder.cs | 1 | 1 | 2 | 6 |\n| web/views/cart.html | 0 | 2 | 0 | 5 |\n| lib/db/query.py | 1 | 2 | 0 | 4 |\n| cmd/server/main.go | 1 | 1 | 1 | 3 |\n| scripts/deploy.sh | 1 | 1 | 1 | 3 |\n| src/api/orders.ts | 2 | 0 | 1 | 3 |\n| src/util.js | 2 | 0 | 1 | 3 |\n| \\(no location\\) | 1 | 0 | 0 | 2 |\n| src/app.js | 0 | 0 | 1 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX002 | UnusedVar | note | 7 | Unused variable |\n| EX005 | WeakHash | warning | 6 | Weak hash algorithm |\n| EX006 | HardcodedSecret | error | 4 | Hard-coded credential |\n| EX008 | Todo | none | 4 | Leftover TODO comment |\n| EX004 | SqlConcat | error | 3 | SQL built by string concatenation |\n| EX007 | MissingCsrf | warning | 3 | Form without CSRF token |\n| EX003 | LongLine | warning | 2 | Line too long |\n| EX001 | NoEval | error | 1 | Avoid eval |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n0 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX005 | web/views/cart.html:342 | inSource | underReview | false positive |\n| EX001 | src/util.js:119 | inSource | underReview |  |"
+  }
+ },
+ "04-log-3.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n27 results from 1 run (Example Analyzer 2.1.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 8 |\n| warning | 4 |\n| note | 8 |\n| none | 5 |\n\n2 suppressed results.\n\n7 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/util.js | 4 | 0 | 0 | 6 |\n| web/views/cart.html | 1 | 0 | 2 | 5 |\n| cmd/server/main.go | 1 | 0 | 2 | 3 |\n| \\(no location\\) | 0 | 1 | 1 | 2 |\n| lib/db/query.py | 0 | 2 | 0 | 2 |\n| scripts/deploy.sh | 0 | 0 | 1 | 2 |\n| src/api/orders.ts | 1 | 0 | 1 | 2 |\n| src/app.js | 1 | 0 | 1 | 2 |\n| src/legacy/report\\_builder.cs | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 | NoEval | error | 5 | Avoid eval |\n| EX002 | UnusedVar | note | 4 | Unused variable |\n| EX003 | LongLine | warning | 4 | Line too long |\n| EX004 | SqlConcat | error | 4 | SQL built by string concatenation |\n| EX006 | HardcodedSecret | error | 3 | Hard-coded credential |\n| EX008 | Todo | none | 3 | Leftover TODO comment |\n| EX007 | MissingCsrf | warning | 2 | Form without CSRF token |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n5 new results.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| none | EX003 | web/views/cart.html | line too long here |\n| note | EX008 | cmd/server/main.go:397 | leftover todo comment here |\n| error | EX001 | src/util.js:129 | avoid eval here |\n| warning | EX007 | \\(no location\\) | form without csrf token here |\n| error | EX006 | cmd/server/main.go | hard-coded credential here |\n\n4 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n2 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX002 | web/views/cart.html:395 | external | rejected | test data only |\n| EX008 | src/app.js:349 | external | accepted | false positive |\n| EX007 | src/legacy/report\\_builder.cs:100 | external | accepted | false positive |"
+  }
+ },
+ "05-log-4.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n30 results from 1 run (Example Analyzer 2.1.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 1 |\n| warning | 19 |\n| note | 2 |\n| none | 2 |\n\n6 suppressed results.\n\n8 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/legacy/report\\_builder.cs | 1 | 4 | 0 | 5 |\n| web/views/cart.html | 0 | 4 | 0 | 4 |\n| \\(no location\\) | 0 | 3 | 0 | 3 |\n| lib/db/query.py | 0 | 2 | 0 | 3 |\n| scripts/deploy.sh | 0 | 2 | 1 | 3 |\n| src/api/orders.ts | 0 | 1 | 0 | 2 |\n| src/app.js | 0 | 1 | 1 | 2 |\n| cmd/server/main.go | 0 | 1 | 0 | 1 |\n| src/util.js | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX008 | Todo | warning | 6 | Leftover TODO comment |\n| EX003 | LongLine | warning | 5 | Line too long |\n| EX007 | MissingCsrf | warning | 5 | Form without CSRF token |\n| EX002 | UnusedVar | warning | 3 | Unused variable |\n| EX005 | WeakHash | warning | 2 | Weak hash algorithm |\n| EX001 | NoEval | warning | 1 | Avoid eval |\n| EX004 | SqlConcat | warning | 1 | SQL built by string concatenation |\n| EX006 | HardcodedSecret | warning | 1 | Hard-coded credential |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n6 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX007 | src/api/orders.ts | external | underReview |  |\n| EX003 | web/views/cart.html:394 | external | accepted | test data only |\n| EX004 | web/views/cart.html:290 | inSource | accepted |  |\n| EX001 | src/api/orders.ts:62 | external | accepted |  |\n| EX003 | web/views/cart.html:136 | inSource | underReview | false positive |\n| EX006 | scripts/deploy.sh:289 | external | accepted |  |\n| EX004 | lib/db/query.py:339 | inSource | accepted |  |\n| EX005 | lib/db/query.py:380 | external | accepted | test data only |"
+  }
+ },
+ "06-log-5.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n4 results from 1 run (Example Analyzer 2.7.0).\n\n| Level | Results |\n| --- | ---: |\n| warning | 2 |\n| note | 1 |\n| none | 1 |\n\n0 suppressed results.\n\n4 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/app.js | 0 | 1 | 0 | 1 |\n| src/legacy/report\\_builder.cs | 0 | 0 | 0 | 1 |\n| src/util.js | 0 | 1 | 0 | 1 |\n| web/views/cart.html | 0 | 0 | 1 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 | NoEval | error | 1 | Avoid eval |\n| EX002 | UnusedVar | note | 1 | Unused variable |\n| EX004 | SqlConcat | error | 1 | SQL built by string concatenation |\n| EX007 | MissingCsrf | warning | 1 | Form without CSRF token |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "07-log-6.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n16 results from 1 run (Example Analyzer 2.6.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 7 |\n| warning | 4 |\n| none | 4 |\n\n1 suppressed result.\n\n7 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| cmd/server/main.go | 1 | 1 | 0 | 4 |\n| src/api/orders.ts | 2 | 1 | 0 | 3 |\n| src/legacy/report\\_builder.cs | 0 | 1 | 0 | 3 |\n| \\(no location\\) | 2 | 0 | 0 | 2 |\n| lib/db/query.py | 0 | 1 | 0 | 1 |\n| src/app.js | 1 | 0 | 0 | 1 |\n| src/util.js | 1 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX006 | HardcodedSecret | error | 3 | Hard-coded credential |\n| EX008 | Todo | none | 3 | Leftover TODO comment |\n| EX001 | NoEval | error | 2 | Avoid eval |\n| EX002 | UnusedVar | note | 2 | Unused variable |\n| EX004 | SqlConcat | error | 2 | SQL built by string concatenation |\n| EX007 | MissingCsrf | warning | 2 | Form without CSRF token |\n| EX003 | LongLine | warning | 1 | Line too long |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n3 new results.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| warning | EX007 | src/api/orders.ts:310 | form without csrf token here |\n| error | EX004 | src/api/orders.ts:373 | sql built by string concatenation here |\n| error | EX006 | \\(no location\\) | hard-coded credential here |\n\n2 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n1 suppressed result.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX005 | src/app.js:301 | inSource | accepted |  |\n| EX001 | \\(no location\\) | external | rejected | false positive |"
+  }
+ },
+ "08-log-7.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n15 results from 1 run (Example Analyzer 2.8.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 7 |\n| warning | 4 |\n| none | 3 |\n\n1 suppressed result.\n\n7 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/api/orders.ts | 3 | 0 | 0 | 3 |\n| src/legacy/report\\_builder.cs | 1 | 1 | 0 | 3 |\n| cmd/server/main.go | 1 | 0 | 0 | 2 |\n| src/app.js | 1 | 0 | 0 | 2 |\n| src/util.js | 1 | 1 | 0 | 2 |\n| \\(no location\\) | 0 | 1 | 0 | 1 |\n| web/views/cart.html | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX004 | SqlConcat | error | 3 | SQL built by string concatenation |\n| EX006 | HardcodedSecret | error | 3 | Hard-coded credential |\n| EX005 | WeakHash | warning | 2 | Weak hash algorithm |\n| EX007 | MissingCsrf | warning | 2 | Form without CSRF token |\n| EX008 | Todo | none | 2 | Leftover TODO comment |\n| EX001 | NoEval | error | 1 | Avoid eval |\n| EX002 | UnusedVar | note | 1 | Unused variable |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n1 suppressed result.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX002 | scripts/deploy.sh:352 | inSource | accepted | test data only |"
+  }
+ },
+ "09-log-8.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n8 results from 1 run (Example Analyzer 2.5.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 1 |\n| warning | 5 |\n| none | 2 |\n\n0 suppressed results.\n\n6 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/api/orders.ts | 1 | 2 | 0 | 3 |\n| lib/db/query.py | 0 | 1 | 0 | 2 |\n| scripts/deploy.sh | 0 | 1 | 0 | 2 |\n| web/views/cart.html | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX008 | Todo | warning | 3 | Leftover TODO comment |\n| EX001 | NoEval | warning | 1 | Avoid eval |\n| EX003 | LongLine | warning | 1 | Line too long |\n| EX004 | SqlConcat | warning | 1 | SQL built by string concatenation |\n| EX005 | WeakHash | warning | 1 | Weak hash algorithm |\n| EX007 | MissingCsrf | warning | 1 | Form without CSRF token |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n0 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX003 | web/views/cart.html | inSource | rejected | false positive |"
+  }
+ },
+ "10-log-9.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n31 results from 1 run (Example Analyzer 2.0.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 8 |\n| warning | 11 |\n| note | 4 |\n| none | 6 |\n\n2 suppressed results.\n\n8 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/util.js | 0 | 3 | 1 | 6 |\n| web/views/cart.html | 3 | 2 | 0 | 6 |\n| cmd/server/main.go | 2 | 2 | 1 | 5 |\n| scripts/deploy.sh | 1 | 1 | 0 | 3 |\n| src/app.js | 1 | 1 | 1 | 3 |\n| src/legacy/report\\_builder.cs | 1 | 0 | 0 | 3 |\n| lib/db/query.py | 0 | 2 | 0 | 2 |\n| \\(no location\\) | 0 | 0 | 1 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 | NoEval | error | 6 | Avoid eval |\n| EX003 | LongLine | warning | 6 | Line too long |\n| EX005 | WeakHash | warning | 4 | Weak hash algorithm |\n| EX002 | UnusedVar | note | 3 | Unused variable |\n| EX006 | HardcodedSecret | error | 3 | Hard-coded credential |\n| EX008 | Todo | none | 3 | Leftover TODO comment |\n| EX004 | SqlConcat | error | 2 | SQL built by string concatenation |\n| EX007 | MissingCsrf | warning | 2 | Form without CSRF token |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n5 new results.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| none | EX003 | src/util.js:399 | line too long here |\n| warning | EX001 | src/app.js:378 | avoid eval here |\n| warning | EX005 | src/util.js:16 | weak hash algorithm here |\n| note | EX002 | src/util.js:111 | unused variable here |\n| warning | EX004 | lib/db/query.py:131 | sql built by string concatenation here |\n\n3 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n2 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX004 | \\(no location\\) | external | accepted | false positive |\n| EX005 | lib/db/query.py:261 | external | accepted | kept for API compatibility |"
+  }
+ },
+ "11-log-10.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n14 results from 1 run (Example Analyzer 2.2.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 4 |\n| warning | 4 |\n| note | 2 |\n| none | 4 |\n\n0 suppressed results.\n\n6 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| lib/db/query.py | 1 | 1 | 0 | 3 |\n| src/legacy/report\\_builder.cs | 0 | 1 | 1 | 3 |\n| src/api/orders.ts | 0 | 1 | 1 | 2 |\n| src/util.js | 1 | 0 | 0 | 2 |\n| \\(no location\\) | 0 | 1 | 0 | 1 |\n| cmd/server/main.go | 1 | 0 | 0 | 1 |\n| scripts/deploy.sh | 1 | 0 | 0 | 1 |\n| web/views/cart.html | 0 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX005 | WeakHash | warning | 4 | Weak hash algorithm |\n| EX001 | NoEval | error | 3 | Avoid eval |\n| EX008 | Todo | none | 3 | Leftover TODO comment |\n| EX003 | LongLine | warning | 2 | Line too long |\n| EX004 | SqlConcat | error | 1 | SQL built by string concatenation |\n| EX006 | HardcodedSecret | error | 1 | Hard-coded credential |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "12-log-11.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n33 results from 1 run (Example Analyzer 2.6.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 13 |\n| warning | 10 |\n| note | 2 |\n| none | 6 |\n\n2 suppressed results.\n\n8 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/util.js | 2 | 2 | 0 | 7 |\n| scripts/deploy.sh | 5 | 1 | 0 | 6 |\n| web/views/cart.html | 2 | 3 | 0 | 5 |\n| lib/db/query.py | 1 | 1 | 1 | 4 |\n| src/api/orders.ts | 2 | 1 | 0 | 3 |\n| \\(no location\\) | 0 | 0 | 1 | 2 |\n| src/app.js | 0 | 2 | 0 | 2 |\n| src/legacy/report\\_builder.cs | 1 | 0 | 0 | 2 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX006 | HardcodedSecret | error | 6 | Hard-coded credential |\n| EX001 | NoEval | error | 5 | Avoid eval |\n| EX002 | UnusedVar | note | 5 | Unused variable |\n| EX004 | SqlConcat | error | 4 | SQL built by string concatenation |\n| EX005 | WeakHash | warning | 3 | Weak hash algorithm |\n| EX007 | MissingCsrf | warning | 3 | Form without CSRF token |\n| EX008 | Todo | none | 3 | Leftover TODO comment |\n| EX003 | LongLine | warning | 2 | Line too long |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n2 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX006 | lib/db/query.py:105 | inSource | accepted | test data only |\n| EX006 | \\(no location\\) | inSource | accepted | test data only |\n| EX002 | src/util.js | inSource | underReview | kept for API compatibility |\n| EX002 | lib/db/query.py | inSource | rejected |  |"
+  }
+ },
+ "13-log-12.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n41 results from 1 run (Example Analyzer 2.6.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 7 |\n| warning | 25 |\n| note | 2 |\n| none | 4 |\n\n3 suppressed results.\n\n8 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| lib/db/query.py | 2 | 6 | 0 | 8 |\n| scripts/deploy.sh | 2 | 4 | 1 | 8 |\n| src/app.js | 0 | 4 | 1 | 6 |\n| cmd/server/main.go | 1 | 3 | 0 | 5 |\n| \\(no location\\) | 1 | 2 | 0 | 3 |\n| src/legacy/report\\_builder.cs | 0 | 3 | 0 | 3 |\n| src/util.js | 1 | 1 | 0 | 3 |\n| src/api/orders.ts | 0 | 1 | 0 | 1 |\n| web/views/cart.html | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX006 | HardcodedSecret | warning | 7 | Hard-coded credential |\n| EX007 | MissingCsrf | warning | 7 | Form without CSRF token |\n| EX001 | NoEval | warning | 5 | Avoid eval |\n| EX003 | LongLine | warning | 5 | Line too long |\n| EX008 | Todo | warning | 5 | Leftover TODO comment |\n| EX004 | SqlConcat | warning | 4 | SQL built by string concatenation |\n| EX005 | WeakHash | warning | 3 | Weak hash algorithm |\n| EX002 | UnusedVar | warning | 2 | Unused variable |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n8 new results.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| warning | EX008 | lib/db/query.py:291 | leftover todo comment here |\n| warning | EX006 | src/legacy/report\\_builder.cs:25 | hard-coded credential here |\n| warning | EX007 | scripts/deploy.sh:74 | form without csrf token here |\n| warning | EX004 | lib/db/query.py:393 | sql built by string concatenation here |\n| warning | EX004 | scripts/deploy.sh | sql built by string concatenation here |\n| warning | EX007 | scripts/deploy.sh:68 | form without csrf token here |\n| warning | EX007 | scripts/deploy.sh | form without csrf token here |\n| error | EX006 | cmd/server/main.go:129 | hard-coded credential here |\n\n8 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n3 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX008 | cmd/server/main.go | inSource | underReview | false positive |\n| EX004 | cmd/server/main.go:184 | external | accepted | false positive |\n| EX007 | src/legacy/report\\_builder.cs:168 | inSource | rejected | false positive |\n| EX002 | \\(no location\\) | inSource | accepted | test data only |\n| EX008 | web/views/cart.html:374 | external | accepted |  |"
+  }
+ },
+ "14-log-13.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n6 results from 1 run (Example Analyzer 2.0.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 3 |\n| warning | 3 |\n\n0 suppressed results.\n\n4 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| lib/db/query.py | 1 | 1 | 0 | 2 |\n| cmd/server/main.go | 0 | 1 | 0 | 1 |\n| src/api/orders.ts | 0 | 1 | 0 | 1 |\n| src/app.js | 1 | 0 | 0 | 1 |\n| src/util.js | 1 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX003 | LongLine | warning | 2 | Line too long |\n| EX006 | HardcodedSecret | error | 2 | Hard-coded credential |\n| EX004 | SqlConcat | error | 1 | SQL built by string concatenation |\n| EX007 | MissingCsrf | warning | 1 | Form without CSRF token |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "15-log-14.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n19 results from 1 run (Example Analyzer 2.7.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 8 |\n| warning | 4 |\n| note | 5 |\n| none | 1 |\n\n1 suppressed result.\n\n7 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/api/orders.ts | 2 | 1 | 1 | 4 |\n| src/app.js | 1 | 1 | 2 | 4 |\n| \\(no location\\) | 1 | 0 | 1 | 2 |\n| lib/db/query.py | 1 | 0 | 0 | 2 |\n| src/util.js | 1 | 1 | 0 | 2 |\n| cmd/server/main.go | 0 | 1 | 0 | 1 |\n| scripts/deploy.sh | 1 | 0 | 0 | 1 |\n| src/legacy/report\\_builder.cs | 1 | 0 | 0 | 1 |\n| web/views/cart.html | 0 | 0 | 1 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX004 | SqlConcat | error | 4 | SQL built by string concatenation |\n| EX002 | UnusedVar | note | 3 | Unused variable |\n| EX006 | HardcodedSecret | error | 3 | Hard-coded credential |\n| EX007 | MissingCsrf | warning | 3 | Form without CSRF token |\n| EX001 | NoEval | error | 2 | Avoid eval |\n| EX003 | LongLine | warning | 2 | Line too long |\n| EX005 | WeakHash | warning | 1 | Weak hash algorithm |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n1 suppressed result.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX004 | src/api/orders.ts:180 | external | underReview | test data only |\n| EX001 | web/views/cart.html:58 | external | accepted |  |"
+  }
+ },
+ "16-log-15.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n11 results from 1 run (Example Analyzer 2.1.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 3 |\n| warning | 3 |\n| note | 2 |\n| none | 2 |\n\n1 suppressed result.\n\n7 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/api/orders.ts | 1 | 0 | 2 | 3 |\n| \\(no location\\) | 1 | 0 | 0 | 2 |\n| scripts/deploy.sh | 0 | 1 | 0 | 1 |\n| src/app.js | 0 | 0 | 0 | 1 |\n| src/legacy/report\\_builder.cs | 0 | 1 | 0 | 1 |\n| src/util.js | 0 | 1 | 0 | 1 |\n| web/views/cart.html | 1 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 | NoEval | error | 2 | Avoid eval |\n| EX002 | UnusedVar | note | 2 | Unused variable |\n| EX004 | SqlConcat | error | 2 | SQL built by string concatenation |\n| EX003 | LongLine | warning | 1 | Line too long |\n| EX005 | WeakHash | warning | 1 | Weak hash algorithm |\n| EX006 | HardcodedSecret | error | 1 | Hard-coded credential |\n| EX008 | Todo | none | 1 | Leftover TODO comment |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n1 new result.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| warning | EX003 | scripts/deploy.sh:313 | line too long here |\n\n1 result absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n1 suppressed result.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX001 | src/api/orders.ts:149 | external | rejected | test data only |\n| EX005 | scripts/deploy.sh:98 | external | accepted | false positive |"
+  }
+ },
+ "17-multi-run-0.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n16 results from 2 runs (Example Analyzer 2.2.0, example-secrets 1.4.2).\n\n| Level | Results |\n| --- | ---: |\n| error | 4 |\n| warning | 7 |\n| note | 2 |\n| none | 3 |\n\n0 suppressed results.\n\n6 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/api/orders.ts | 0 | 3 | 1 | 5 |\n| cmd/server/main.go | 0 | 1 | 1 | 2 |\n| scripts/deploy.sh | 2 | 0 | 0 | 2 |\n| src/util.js | 0 | 2 | 0 | 2 |\n| \\(no location\\) | 1 | 0 | 0 | 1 |\n| lib/db/query.py | 0 | 0 | 0 | 1 |\n| src/app.js | 1 | 0 | 0 | 1 |\n| src/legacy/report\\_builder.cs | 0 | 1 | 0 | 1 |\n| web/views/cart.html | 0 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 | NoEval | error | 5 | Avoid eval |\n| EX005 | WeakHash | warning | 4 | Weak hash algorithm |\n| EX007 | MissingCsrf | warning | 3 | Form without CSRF token |\n| EX002 | UnusedVar | note | 2 | Unused variable |\n| EX004 | SqlConcat | error | 1 | SQL built by string concatenation |\n| EX008 | Todo | none | 1 | Leftover TODO comment |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n1 new result.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| error | EX001 | scripts/deploy.sh:174 | avoid eval here |\n\n4 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n0 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX005 | src/api/orders.ts | inSource | underReview | kept for API compatibility |"
+  }
+ },
+ "18-multi-run-1.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n18 results from 2 runs (Example Analyzer 2.6.0, example-secrets 1.4.2).\n\n| Level | Results |\n| --- | ---: |\n| error | 5 |\n| warning | 6 |\n| note | 4 |\n| none | 3 |\n\n0 suppressed results.\n\n8 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| \\(no location\\) | 0 | 2 | 1 | 3 |\n| scripts/deploy.sh | 0 | 1 | 1 | 3 |\n| src/util.js | 1 | 1 | 1 | 3 |\n| cmd/server/main.go | 1 | 1 | 0 | 2 |\n| src/api/orders.ts | 1 | 0 | 1 | 2 |\n| src/legacy/report\\_builder.cs | 2 | 0 | 0 | 2 |\n| lib/db/query.py | 0 | 0 | 0 | 1 |\n| src/app.js | 0 | 1 | 0 | 1 |\n| web/views/cart.html | 0 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX002 | UnusedVar | note | 4 | Unused variable |\n| EX004 | SqlConcat | error | 4 | SQL built by string concatenation |\n| EX001 | NoEval | error | 3 | Avoid eval |\n| EX003 | LongLine | warning | 2 | Line too long |\n| EX005 | WeakHash | warning | 2 | Weak hash algorithm |\n| EX006 | HardcodedSecret | error | 1 | Hard-coded credential |\n| EX007 | MissingCsrf | warning | 1 | Form without CSRF token |\n| EX008 | Todo | none | 1 | Leftover TODO comment |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "19-multi-run-2.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n12 results from 2 runs (Example Analyzer 2.8.0, example-secrets 1.4.2).\n\n| Level | Results |\n| --- | ---: |\n| error | 3 |\n| warning | 2 |\n| note | 1 |\n| none | 4 |\n\n2 suppressed results.\n\n6 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| scripts/deploy.sh | 2 | 2 | 0 | 4 |\n| lib/db/query.py | 1 | 0 | 0 | 2 |\n| src/legacy/report\\_builder.cs | 0 | 0 | 0 | 2 |\n| src/api/orders.ts | 0 | 0 | 0 | 1 |\n| web/views/cart.html | 0 | 0 | 1 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX008 | Todo | none | 4 | Leftover TODO comment |\n| EX001 | NoEval | error | 2 | Avoid eval |\n| EX002 | UnusedVar | note | 1 | Unused variable |\n| EX003 | LongLine | warning | 1 | Line too long |\n| EX005 | WeakHash | warning | 1 | Weak hash algorithm |\n| EX007 | MissingCsrf | warning | 1 | Form without CSRF token |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n1 new result.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| error | EX008 | scripts/deploy.sh:330 | leftover todo comment here |\n\n2 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n2 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX008 | \\(no location\\) | inSource | accepted | kept for API compatibility |\n| EX005 | cmd/server/main.go | inSource | accepted | false positive |\n| EX001 | lib/db/query.py:327 | inSource | underReview | test data only |"
+  }
+ },
+ "20-multi-run-3.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n18 results from 2 runs (Example Analyzer 2.5.0, example-secrets 1.4.2).\n\n| Level | Results |\n| --- | ---: |\n| error | 5 |\n| warning | 5 |\n| note | 3 |\n| none | 2 |\n\n3 suppressed results.\n\n6 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| scripts/deploy.sh | 2 | 1 | 1 | 4 |\n| \\(no location\\) | 0 | 1 | 1 | 3 |\n| src/util.js | 1 | 0 | 1 | 3 |\n| src/api/orders.ts | 1 | 1 | 0 | 2 |\n| cmd/server/main.go | 0 | 1 | 0 | 1 |\n| lib/db/query.py | 1 | 0 | 0 | 1 |\n| web/views/cart.html | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX004 | SqlConcat | error | 4 | SQL built by string concatenation |\n| EX008 | Todo | none | 4 | Leftover TODO comment |\n| EX002 | UnusedVar | note | 3 | Unused variable |\n| EX006 | HardcodedSecret | error | 2 | Hard-coded credential |\n| EX003 | LongLine | warning | 1 | Line too long |\n| EX005 | WeakHash | warning | 1 | Weak hash algorithm |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n3 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX005 | src/api/orders.ts:248 | inSource | accepted | test data only |\n| EX002 | \\(no location\\) | external | accepted | test data only |\n| EX004 | src/util.js:119 | inSource | accepted |  |"
+  }
+ },
+ "21-multi-run-4.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n9 results from 2 runs (Example Analyzer 2.6.0, example-secrets 1.4.2).\n\n| Level | Results |\n| --- | ---: |\n| error | 3 |\n| warning | 3 |\n| note | 1 |\n| none | 1 |\n\n1 suppressed result.\n\n5 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| cmd/server/main.go | 0 | 0 | 1 | 2 |\n| lib/db/query.py | 1 | 1 | 0 | 2 |\n| src/api/orders.ts | 1 | 1 | 0 | 2 |\n| scripts/deploy.sh | 1 | 0 | 0 | 1 |\n| src/legacy/report\\_builder.cs | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX003 | LongLine | warning | 3 | Line too long |\n| EX007 | MissingCsrf | warning | 2 | Form without CSRF token |\n| EX001 | NoEval | error | 1 | Avoid eval |\n| EX005 | WeakHash | warning | 1 | Weak hash algorithm |\n| EX008 | Todo | none | 1 | Leftover TODO comment |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n0 new results.\n\n0 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n1 suppressed result.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX008 | src/api/orders.ts:134 | external | accepted | kept for API compatibility |"
+  }
+ },
+ "22-multi-run-5.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n11 results from 2 runs (Example Analyzer 2.5.0, example-secrets 1.4.2).\n\n| Level | Results |\n| --- | ---: |\n| error | 2 |\n| warning | 5 |\n| note | 3 |\n| none | 1 |\n\n0 suppressed results.\n\n5 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| web/views/cart.html | 0 | 2 | 1 | 3 |\n| \\(no location\\) | 1 | 0 | 0 | 2 |\n| src/app.js | 1 | 0 | 1 | 2 |\n| lib/db/query.py | 0 | 0 | 1 | 1 |\n| src/api/orders.ts | 0 | 1 | 0 | 1 |\n| src/legacy/report\\_builder.cs | 0 | 1 | 0 | 1 |\n| src/util.js | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX002 | UnusedVar | note | 5 | Unused variable |\n| EX003 | LongLine | warning | 2 | Line too long |\n| EX004 | SqlConcat | error | 2 | SQL built by string concatenation |\n| EX006 | HardcodedSecret | error | 1 | Hard-coded credential |\n| EX008 | Todo | none | 1 | Leftover TODO comment |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "23-file-uris.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n12 results from 1 run (Example Analyzer 2.5.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 6 |\n| warning | 4 |\n| none | 2 |\n\n0 suppressed results.\n\n7 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| C:/work/shop app/src/api/orders.ts | 2 | 1 | 0 | 4 |\n| C:/work/shop app/src/legacy/report\\_builder.cs | 3 | 0 | 0 | 3 |\n| C:/work/shop app/web/views/cart.html | 0 | 2 | 0 | 2 |\n| \\(no location\\) | 0 | 0 | 0 | 1 |\n| C:/work/shop app/src/app.js | 0 | 1 | 0 | 1 |\n| C:/work/shop app/src/util.js | 1 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX006 | HardcodedSecret | error | 3 | Hard-coded credential |\n| EX001 | NoEval | error | 2 | Avoid eval |\n| EX002 | UnusedVar | note | 2 | Unused variable |\n| EX004 | SqlConcat | error | 2 | SQL built by string concatenation |\n| EX003 | LongLine | warning | 1 | Line too long |\n| EX005 | WeakHash | warning | 1 | Weak hash algorithm |\n| EX007 | MissingCsrf | warning | 1 | Form without CSRF token |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n0 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX003 | \\(no location\\) | external | underReview | test data only |"
+  }
+ },
+ "24-no-rules.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n8 results from 1 run (Example Analyzer 2.4.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 2 |\n| warning | 4 |\n| none | 1 |\n\n1 suppressed result.\n\n5 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| cmd/server/main.go | 0 | 2 | 0 | 3 |\n| src/app.js | 2 | 0 | 0 | 2 |\n| scripts/deploy.sh | 0 | 1 | 0 | 1 |\n| src/legacy/report\\_builder.cs | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 |  | warning | 2 |  |\n| EX005 |  | warning | 2 |  |\n| EX002 |  | warning | 1 |  |\n| EX003 |  | warning | 1 |  |\n| EX006 |  | warning | 1 |  |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n1 suppressed result.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX001 | src/app.js:287 | external | rejected | false positive |\n| EX003 | scripts/deploy.sh:349 | inSource | accepted | kept for API compatibility |"
+  }
+ },
+ "25-many-results.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n3000 results from 1 run (Example Analyzer 2.0.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 893 |\n| warning | 902 |\n| note | 449 |\n| none | 557 |\n\n199 suppressed results.\n\n8 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/legacy/report\\_builder.cs | 112 | 99 | 55 | 339 |\n| src/util.js | 111 | 102 | 47 | 331 |\n| src/api/orders.ts | 116 | 108 | 53 | 328 |\n| cmd/server/main.go | 106 | 106 | 48 | 323 |\n| lib/db/query.py | 106 | 102 | 57 | 320 |\n| scripts/deploy.sh | 97 | 109 | 48 | 319 |\n| web/views/cart.html | 83 | 107 | 55 | 308 |\n| src/app.js | 91 | 88 | 50 | 300 |\n| \\(no location\\) | 71 | 81 | 36 | 233 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX007 | MissingCsrf | warning | 373 | Form without CSRF token |\n| EX001 | NoEval | error | 360 | Avoid eval |\n| EX008 | Todo | none | 359 | Leftover TODO comment |\n| EX005 | WeakHash | warning | 357 | Weak hash algorithm |\n| EX006 | HardcodedSecret | error | 353 | Hard-coded credential |\n| EX002 | UnusedVar | note | 346 | Unused variable |\n| EX004 | SqlConcat | error | 343 | SQL built by string concatenation |\n| EX003 | LongLine | warning | 310 | Line too long |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n525 new results.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| warning | EX003 | scripts/deploy.sh:35 | line too long here |\n| error | EX001 | \\(no location\\) | avoid eval here |\n| none | EX008 | \\(no location\\) | leftover todo comment here |\n| error | EX001 | src/legacy/report\\_builder.cs:385 | avoid eval here |\n| error | EX006 | src/legacy/report\\_builder.cs | hard-coded credential here |\n| error | EX003 | src/util.js:125 | line too long here |\n| none | EX008 | src/app.js | leftover todo comment here |\n| note | EX004 | cmd/server/main.go:367 | sql built by string concatenation here |\n| none | EX003 | cmd/server/main.go:281 | line too long here |\n| none | EX003 | scripts/deploy.sh:238 | line too long here |\n| none | EX003 | src/app.js:74 | line too long here |\n| none | EX008 | cmd/server/main.go | leftover todo comment here |\n| none | EX001 | cmd/server/main.go:116 | avoid eval here |\n| warning | EX005 | src/app.js:99 | weak hash algorithm here |\n| none | EX001 | src/app.js:268 | avoid eval here |\n| note | EX002 | cmd/server/main.go:13 | unused variable here |\n| note | EX005 | src/app.js | weak hash algorithm here |\n| error | EX006 | src/api/orders.ts:367 | hard-coded credential here |\n| note | EX002 | \\(no location\\) | unused variable here |\n| warning | EX007 | cmd/server/main.go:218 | form without csrf token here |\n| error | EX004 | web/views/cart.html:213 | sql built by string concatenation here |\n| error | EX001 | src/legacy/report\\_builder.cs:242 | avoid eval here |\n| warning | EX003 | src/legacy/report\\_builder.cs:61 | line too long here |\n| warning | EX005 | web/views/cart.html:93 | weak hash algorithm here |\n| warning | EX007 | scripts/deploy.sh:205 | form without csrf token here |\n| warning | EX003 | cmd/server/main.go:168 | line too long here |\n| none | EX008 | scripts/deploy.sh:234 | leftover todo comment here |\n| warning | EX007 | src/api/orders.ts:33 | form without csrf token here |\n| none | EX005 | src/util.js | weak hash algorithm here |\n| warning | EX003 | src/app.js:243 | line too long here |\n| error | EX001 | src/util.js | avoid eval here |\n| none | EX008 | lib/db/query.py | leftover todo comment here |\n| error | EX004 | src/legacy/report\\_builder.cs:334 | sql built by string concatenation here |\n| error | EX004 | src/legacy/report\\_builder.cs:316 | sql built by string concatenation here |\n| error | EX006 | src/util.js:30 | hard-coded credential here |\n| none | EX008 | src/util.js:14 | leftover todo comment here |\n| warning | EX004 | cmd/server/main.go:139 | sql built by string concatenation here |\n| error | EX006 | lib/db/query.py:132 | hard-coded credential here |\n| note | EX002 | \\(no location\\) | unused variable here |\n| note | EX002 | src/api/orders.ts:295 | unused variable here |\n| error | EX005 | scripts/deploy.sh:122 | weak hash algorithm here |\n| note | EX002 | cmd/server/main.go | unused variable here |\n| none | EX008 | \\(no location\\) | leftover todo comment here |\n| warning | EX003 | src/util.js | line too long here |\n| warning | EX006 | web/views/cart.html:328 | hard-coded credential here |\n| warning | EX005 | src/legacy/report\\_builder.cs:221 | weak hash algorithm here |\n| note | EX004 | src/app.js:105 | sql built by string concatenation here |\n| error | EX001 | scripts/deploy.sh:128 | avoid eval here |\n| none | EX002 | src/app.js:157 | unused variable here |\n| warning | EX008 | scripts/deploy.sh:76 | leftover todo comment here |\n| none | EX005 | src/util.js | weak hash algorithm here |\n| error | EX006 | cmd/server/main.go:59 | hard-coded credential here |\n| note | EX002 | web/views/cart.html:179 | unused variable here |\n| warning | EX003 | src/api/orders.ts:382 | line too long here |\n| note | EX002 | cmd/server/main.go:158 | unused variable here |\n| none | EX008 | src/app.js:183 | leftover todo comment here |\n| none | EX002 | lib/db/query.py:275 | unused variable here |\n| none | EX008 | web/views/cart.html:74 | leftover todo comment here |\n| note | EX002 | \\(no location\\) | unused variable here |\n| error | EX006 | src/api/orders.ts:67 | hard-coded credential here |\n| error | EX004 | lib/db/query.py:308 | sql built by string concatenation here |\n| error | EX002 | src/util.js:367 | unused variable here |\n| error | EX004 | cmd/server/main.go:241 | sql built by string concatenation here |\n| none | EX004 | cmd/server/main.go | sql built by string concatenation here |\n| note | EX002 | src/util.js:108 | unused variable here |\n| none | EX008 | src/util.js:234 | leftover todo comment here |\n| none | EX007 | lib/db/query.py:179 | form without csrf token here |\n| warning | EX005 | src/legacy/report\\_builder.cs:30 | weak hash algorithm here |\n| note | EX002 | \\(no location\\) | unused variable here |\n| none | EX008 | src/util.js:279 | leftover todo comment here |\n| error | EX006 | src/util.js:175 | hard-coded credential here |\n| warning | EX005 | \\(no location\\) | weak hash algorithm here |\n| error | EX004 | cmd/server/main.go:345 | sql built by string concatenation here |\n| none | EX007 | src/app.js:262 | form without csrf token here |\n| warning | EX005 | src/util.js:152 | weak hash algorithm here |\n| error | EX004 | cmd/server/main.go:202 | sql built by string concatenation here |\n| none | EX008 | src/legacy/report\\_builder.cs:244 | leftover todo comment here |\n| error | EX004 | src/api/orders.ts:114 | sql built by string concatenation here |\n| warning | EX008 | scripts/deploy.sh:125 | leftover todo comment here |\n| note | EX002 | src/app.js:392 | unused variable here |\n| error | EX001 | scripts/deploy.sh:183 | avoid eval here |\n| note | EX002 | src/api/orders.ts:109 | unused variable here |\n| note | EX008 | lib/db/query.py:224 | leftover todo comment here |\n| error | EX006 | src/legacy/report\\_builder.cs:131 | hard-coded credential here |\n| error | EX001 | src/legacy/report\\_builder.cs:190 | avoid eval here |\n| error | EX006 | web/views/cart.html:91 | hard-coded credential here |\n| none | EX003 | src/app.js:28 | line too long here |\n| error | EX006 | src/api/orders.ts:73 | hard-coded credential here |\n| none | EX008 | src/legacy/report\\_builder.cs | leftover todo comment here |\n| warning | EX007 | src/util.js:252 | form without csrf token here |\n| error | EX001 | scripts/deploy.sh:121 | avoid eval here |\n| note | EX002 | src/legacy/report\\_builder.cs:121 | unused variable here |\n| warning | EX003 | scripts/deploy.sh | line too long here |\n| warning | EX005 | web/views/cart.html:147 | weak hash algorithm here |\n| note | EX006 | src/app.js:237 | hard-coded credential here |\n| none | EX006 | src/api/orders.ts:155 | hard-coded credential here |\n| none | EX008 | scripts/deploy.sh:335 | leftover todo comment here |\n| error | EX007 | scripts/deploy.sh | form without csrf token here |\n| none | EX008 | src/app.js:109 | leftover todo comment here |\n| none | EX004 | web/views/cart.html | sql built by string concatenation here |\n| error | EX003 | lib/db/query.py:396 | line too long here |\n| error | EX002 | \\(no location\\) | unused variable here |\n| warning | EX003 | web/views/cart.html:64 | line too long here |\n| warning | EX007 | web/views/cart.html:20 | form without csrf token here |\n| error | EX006 | src/legacy/report\\_builder.cs:352 | hard-coded credential here |\n| warning | EX007 | src/app.js:75 | form without csrf token here |\n| error | EX006 | src/legacy/report\\_builder.cs:16 | hard-coded credential here |\n| none | EX006 | src/api/orders.ts:226 | hard-coded credential here |\n| none | EX008 | src/legacy/report\\_builder.cs:69 | leftover todo comment here |\n| none | EX003 | src/legacy/report\\_builder.cs:132 | line too long here |\n| warning | EX005 | web/views/cart.html | weak hash algorithm here |\n| error | EX001 | \\(no location\\) | avoid eval here |\n| error | EX005 | web/views/cart.html:219 | weak hash algorithm here |\n| error | EX004 | web/views/cart.html:336 | sql built by string concatenation here |\n| note | EX002 | src/legacy/report\\_builder.cs:33 | unused variable here |\n| note | EX006 | src/legacy/report\\_builder.cs:185 | hard-coded credential here |\n| none | EX006 | lib/db/query.py | hard-coded credential here |\n| warning | EX003 | \\(no location\\) | line too long here |\n| warning | EX008 | src/api/orders.ts:172 | leftover todo comment here |\n| note | EX002 | src/legacy/report\\_builder.cs | unused variable here |\n| warning | EX005 | cmd/server/main.go:224 | weak hash algorithm here |\n| error | EX004 | src/util.js:335 | sql built by string concatenation here |\n| note | EX002 | src/api/orders.ts:219 | unused variable here |\n| error | EX006 | web/views/cart.html:251 | hard-coded credential here |\n| error | EX005 | scripts/deploy.sh:237 | weak hash algorithm here |\n| error | EX006 | \\(no location\\) | hard-coded credential here |\n| error | EX001 | src/util.js | avoid eval here |\n| warning | EX005 | web/views/cart.html:351 | weak hash algorithm here |\n| error | EX006 | \\(no location\\) | hard-coded credential here |\n| error | EX006 | src/api/orders.ts:204 | hard-coded credential here |\n| none | EX007 | web/views/cart.html:263 | form without csrf token here |\n| note | EX004 | src/api/orders.ts:198 | sql built by string concatenation here |\n| warning | EX005 | src/api/orders.ts:162 | weak hash algorithm here |\n| error | EX004 | src/app.js:105 | sql built by string concatenation here |\n| warning | EX007 | \\(no location\\) | form without csrf token here |\n| none | EX008 | web/views/cart.html | leftover todo comment here |\n| error | EX003 | lib/db/query.py:14 | line too long here |\n| error | EX004 | cmd/server/main.go:193 | sql built by string concatenation here |\n| none | EX008 | lib/db/query.py:102 | leftover todo comment here |\n| warning | EX007 | lib/db/query.py:49 | form without csrf token here |\n| error | EX001 | \\(no location\\) | avoid eval here |\n| warning | EX007 | src/api/orders.ts:354 | form without csrf token here |\n| warning | EX003 | src/api/orders.ts:356 | line too long here |\n| warning | EX003 | src/util.js:260 | line too long here |\n| note | EX002 | cmd/server/main.go:24 | unused variable here |\n| warning | EX003 | cmd/server/main.go:302 | line too long here |\n| note | EX002 | lib/db/query.py:24 | unused variable here |\n| error | EX001 | src/api/orders.ts:365 | avoid eval here |\n| error | EX006 | src/api/orders.ts:256 | hard-coded credential here |\n| warning | EX007 | src/legacy/report\\_builder.cs:43 | form without csrf token here |\n| note | EX003 | src/app.js:81 | line too long here |\n| note | EX002 | web/views/cart.html:177 | unused variable here |\n| none | EX008 | src/legacy/report\\_builder.cs | leftover todo comment here |\n| warning | EX007 | scripts/deploy.sh:124 | form without csrf token here |\n| warning | EX005 | lib/db/query.py:214 | weak hash algorithm here |\n| warning | EX005 | \\(no location\\) | weak hash algorithm here |\n| note | EX002 | cmd/server/main.go:137 | unused variable here |\n| warning | EX005 | cmd/server/main.go:307 | weak hash algorithm here |\n| warning | EX007 | web/views/cart.html:90 | form without csrf token here |\n| note | EX002 | src/legacy/report\\_builder.cs:289 | unused variable here |\n| note | EX002 | web/views/cart.html:174 | unused variable here |\n| warning | EX007 | scripts/deploy.sh:171 | form without csrf token here |\n| note | EX002 | src/legacy/report\\_builder.cs:204 | unused variable here |\n| none | EX003 | src/legacy/report\\_builder.cs | line too long here |\n| error | EX004 | \\(no location\\) | sql built by string concatenation here |\n| error | EX001 | cmd/server/main.go:116 | avoid eval here |\n| note | EX002 | lib/db/query.py:239 | unused variable here |\n| warning | EX005 | src/util.js | weak hash algorithm here |\n| error | EX006 | src/api/orders.ts:369 | hard-coded credential here |\n| error | EX001 | src/util.js:177 | avoid eval here |\n| warning | EX007 | scripts/deploy.sh | form without csrf token here |\n| error | EX003 | lib/db/query.py:120 | line too long here |\n| warning | EX007 | \\(no location\\) | form without csrf token here |\n| warning | EX003 | src/util.js:69 | line too long here |\n| warning | EX005 | src/app.js | weak hash algorithm here |\n| warning | EX003 | cmd/server/main.go:238 | line too long here |\n| note | EX004 | src/app.js:221 | sql built by string concatenation here |\n| warning | EX005 | \\(no location\\) | weak hash algorithm here |\n| error | EX001 | src/api/orders.ts:282 | avoid eval here |\n| note | EX008 | src/util.js:304 | leftover todo comment here |\n| none | EX008 | web/views/cart.html | leftover todo comment here |\n| error | EX004 | cmd/server/main.go:88 | sql built by string concatenation here |\n| note | EX002 | src/app.js:6 | unused variable here |\n| warning | EX005 | src/app.js:49 | weak hash algorithm here |\n| note | EX002 | web/views/cart.html:215 | unused variable here |\n| none | EX008 | src/api/orders.ts | leftover todo comment here |\n| warning | EX007 | src/app.js:141 | form without csrf token here |\n| warning | EX003 | src/api/orders.ts:154 | line too long here |\n| warning | EX006 | src/util.js:207 | hard-coded credential here |\n| error | EX005 | src/app.js:137 | weak hash algorithm here |\n| none | EX008 | src/util.js:314 | leftover todo comment here |\n| warning | EX005 | web/views/cart.html:138 | weak hash algorithm here |\n| note | EX002 | scripts/deploy.sh:321 | unused variable here |\n| none | EX008 | cmd/server/main.go:148 | leftover todo comment here |\n| warning | EX007 | scripts/deploy.sh | form without csrf token here |\n| none | EX008 | src/app.js | leftover todo comment here |\n| note | EX002 | src/legacy/report\\_builder.cs:321 | unused variable here |\n| warning | EX005 | src/legacy/report\\_builder.cs:20 | weak hash algorithm here |\n| warning | EX005 | cmd/server/main.go:306 | weak hash algorithm here |\n| warning | EX007 | src/api/orders.ts:46 | form without csrf token here |\n| none | EX004 | src/api/orders.ts:242 | sql built by string concatenation here |\n| none | EX002 | src/app.js:114 | unused variable here |\n| warning | EX003 | \\(no location\\) | line too long here |\n| warning | EX003 | src/api/orders.ts:148 | line too long here |\n| error | EX001 | lib/db/query.py:61 | avoid eval here |\n| note | EX008 | \\(no location\\) | leftover todo comment here |\n| warning | EX003 | cmd/server/main.go | line too long here |\n| error | EX004 | cmd/server/main.go:133 | sql built by string concatenation here |\n| note | EX002 | src/api/orders.ts | unused variable here |\n| none | EX004 | scripts/deploy.sh:145 | sql built by string concatenation here |\n| error | EX006 | lib/db/query.py:184 | hard-coded credential here |\n| error | EX006 | src/util.js:267 | hard-coded credential here |\n| note | EX007 | lib/db/query.py:90 | form without csrf token here |\n| note | EX002 | \\(no location\\) | unused variable here |\n| note | EX002 | cmd/server/main.go | unused variable here |\n| error | EX006 | cmd/server/main.go:119 | hard-coded credential here |\n| error | EX004 | web/views/cart.html:52 | sql built by string concatenation here |\n| warning | EX003 | scripts/deploy.sh:66 | line too long here |\n| error | EX003 | src/app.js:96 | line too long here |\n| error | EX006 | src/util.js:119 | hard-coded credential here |\n| error | EX006 | src/legacy/report\\_builder.cs:377 | hard-coded credential here |\n| warning | EX005 | src/api/orders.ts:293 | weak hash algorithm here |\n| note | EX008 | src/api/orders.ts:295 | leftover todo comment here |\n| warning | EX001 | cmd/server/main.go:250 | avoid eval here |\n| none | EX007 | \\(no location\\) | form without csrf token here |\n| error | EX005 | web/views/cart.html:10 | weak hash algorithm here |\n| error | EX006 | web/views/cart.html:84 | hard-coded credential here |\n| error | EX003 | src/util.js | line too long here |\n| note | EX002 | scripts/deploy.sh:96 | unused variable here |\n| note | EX006 | cmd/server/main.go:241 | hard-coded credential here |\n| warning | EX008 | scripts/deploy.sh:373 | leftover todo comment here |\n| error | EX006 | src/legacy/report\\_builder.cs:344 | hard-coded credential here |\n| note | EX002 | web/views/cart.html | unused variable here |\n| none | EX001 | cmd/server/main.go:234 | avoid eval here |\n| warning | EX004 | src/app.js:246 | sql built by string concatenation here |\n| error | EX006 | src/util.js:20 | hard-coded credential here |\n| error | EX007 | cmd/server/main.go:343 | form without csrf token here |\n| warning | EX007 | scripts/deploy.sh:145 | form without csrf token here |\n| warning | EX003 | src/util.js:283 | line too long here |\n| note | EX002 | lib/db/query.py:377 | unused variable here |\n| none | EX005 | src/legacy/report\\_builder.cs | weak hash algorithm here |\n| warning | EX001 | web/views/cart.html | avoid eval here |\n| none | EX008 | src/api/orders.ts:172 | leftover todo comment here |\n| error | EX004 | scripts/deploy.sh:246 | sql built by string concatenation here |\n| none | EX003 | cmd/server/main.go:192 | line too long here |\n| error | EX004 | \\(no location\\) | sql built by string concatenation here |\n| error | EX004 | cmd/server/main.go:354 | sql built by string concatenation here |\n| none | EX002 | src/util.js | unused variable here |\n| warning | EX007 | lib/db/query.py:111 | form without csrf token here |\n| error | EX004 | lib/db/query.py:217 | sql built by string concatenation here |\n| none | EX002 | src/util.js:153 | unused variable here |\n| error | EX001 | src/util.js:82 | avoid eval here |\n| error | EX002 | src/app.js:186 | unused variable here |\n| error | EX005 | lib/db/query.py | weak hash algorithm here |\n| warning | EX007 | scripts/deploy.sh:51 | form without csrf token here |\n| note | EX002 | scripts/deploy.sh:314 | unused variable here |\n| warning | EX008 | scripts/deploy.sh:16 | leftover todo comment here |\n| warning | EX005 | src/api/orders.ts:158 | weak hash algorithm here |\n| none | EX004 | src/app.js:248 | sql built by string concatenation here |\n| error | EX002 | src/app.js:375 | unused variable here |\n| warning | EX007 | web/views/cart.html:198 | form without csrf token here |\n| error | EX001 | src/api/orders.ts | avoid eval here |\n| warning | EX005 | src/legacy/report\\_builder.cs:339 | weak hash algorithm here |\n| warning | EX001 | cmd/server/main.go:348 | avoid eval here |\n| note | EX008 | src/app.js:271 | leftover todo comment here |\n| warning | EX005 | src/util.js | weak hash algorithm here |\n| error | EX006 | src/legacy/report\\_builder.cs:144 | hard-coded credential here |\n| error | EX006 | web/views/cart.html:133 | hard-coded credential here |\n| none | EX008 | web/views/cart.html:85 | leftover todo comment here |\n| note | EX007 | src/api/orders.ts:68 | form without csrf token here |\n| note | EX005 | scripts/deploy.sh:201 | weak hash algorithm here |\n| error | EX001 | src/app.js:95 | avoid eval here |\n| warning | EX003 | \\(no location\\) | line too long here |\n| warning | EX005 | lib/db/query.py:181 | weak hash algorithm here |\n| error | EX007 | src/legacy/report\\_builder.cs:136 | form without csrf token here |\n| error | EX004 | lib/db/query.py:59 | sql built by string concatenation here |\n| none | EX008 | web/views/cart.html:308 | leftover todo comment here |\n| error | EX003 | src/app.js:37 | line too long here |\n| note | EX003 | src/app.js:381 | line too long here |\n| warning | EX007 | web/views/cart.html:312 | form without csrf token here |\n| error | EX004 | src/legacy/report\\_builder.cs:33 | sql built by string concatenation here |\n| warning | EX003 | src/util.js:208 | line too long here |\n| error | EX006 | scripts/deploy.sh:44 | hard-coded credential here |\n| none | EX008 | \\(no location\\) | leftover todo comment here |\n| none | EX008 | scripts/deploy.sh | leftover todo comment here |\n| warning | EX003 | src/legacy/report\\_builder.cs:42 | line too long here |\n| note | EX002 | \\(no location\\) | unused variable here |\n| none | EX008 | src/app.js:137 | leftover todo comment here |\n| error | EX004 | lib/db/query.py:79 | sql built by string concatenation here |\n| note | EX002 | scripts/deploy.sh:283 | unused variable here |\n| warning | EX003 | src/legacy/report\\_builder.cs | line too long here |\n| error | EX002 | src/api/orders.ts:190 | unused variable here |\n| error | EX006 | src/api/orders.ts:244 | hard-coded credential here |\n| warning | EX003 | lib/db/query.py:242 | line too long here |\n| warning | EX003 | src/util.js:212 | line too long here |\n| error | EX001 | scripts/deploy.sh:224 | avoid eval here |\n| warning | EX005 | scripts/deploy.sh:9 | weak hash algorithm here |\n| note | EX003 | src/util.js | line too long here |\n| warning | EX007 | src/api/orders.ts | form without csrf token here |\n| none | EX002 | cmd/server/main.go | unused variable here |\n| error | EX001 | src/legacy/report\\_builder.cs:28 | avoid eval here |\n| note | EX004 | src/api/orders.ts:274 | sql built by string concatenation here |\n| error | EX006 | cmd/server/main.go:8 | hard-coded credential here |\n| note | EX007 | src/api/orders.ts:25 | form without csrf token here |\n| warning | EX003 | web/views/cart.html:175 | line too long here |\n| warning | EX003 | cmd/server/main.go:133 | line too long here |\n| error | EX001 | cmd/server/main.go:317 | avoid eval here |\n| none | EX008 | src/legacy/report\\_builder.cs:137 | leftover todo comment here |\n| warning | EX005 | scripts/deploy.sh:65 | weak hash algorithm here |\n| error | EX004 | cmd/server/main.go:262 | sql built by string concatenation here |\n| error | EX006 | src/api/orders.ts:1 | hard-coded credential here |\n| none | EX008 | src/app.js | leftover todo comment here |\n| error | EX002 | src/legacy/report\\_builder.cs:116 | unused variable here |\n| error | EX006 | scripts/deploy.sh:159 | hard-coded credential here |\n| error | EX008 | src/legacy/report\\_builder.cs:188 | leftover todo comment here |\n| warning | EX001 | lib/db/query.py | avoid eval here |\n| error | EX006 | \\(no location\\) | hard-coded credential here |\n| none | EX008 | src/app.js:168 | leftover todo comment here |\n| warning | EX003 | cmd/server/main.go:313 | line too long here |\n| error | EX001 | scripts/deploy.sh:105 | avoid eval here |\n| warning | EX005 | src/util.js:399 | weak hash algorithm here |\n| error | EX004 | \\(no location\\) | sql built by string concatenation here |\n| warning | EX004 | scripts/deploy.sh:209 | sql built by string concatenation here |\n| error | EX006 | scripts/deploy.sh:347 | hard-coded credential here |\n| error | EX004 | lib/db/query.py:8 | sql built by string concatenation here |\n| warning | EX005 | \\(no location\\) | weak hash algorithm here |\n| error | EX003 | cmd/server/main.go:220 | line too long here |\n| error | EX001 | lib/db/query.py:304 | avoid eval here |\n| note | EX002 | web/views/cart.html | unused variable here |\n| warning | EX003 | cmd/server/main.go:53 | line too long here |\n| warning | EX005 | lib/db/query.py | weak hash algorithm here |\n| none | EX004 | cmd/server/main.go:17 | sql built by string concatenation here |\n| error | EX007 | web/views/cart.html:396 | form without csrf token here |\n| error | EX006 | src/legacy/report\\_builder.cs:254 | hard-coded credential here |\n| error | EX007 | src/app.js:153 | form without csrf token here |\n| warning | EX005 | \\(no location\\) | weak hash algorithm here |\n| none | EX008 | lib/db/query.py:106 | leftover todo comment here |\n| error | EX004 | src/api/orders.ts:251 | sql built by string concatenation here |\n| error | EX006 | src/api/orders.ts:34 | hard-coded credential here |\n| warning | EX007 | cmd/server/main.go:327 | form without csrf token here |\n| error | EX001 | web/views/cart.html:228 | avoid eval here |\n| note | EX008 | scripts/deploy.sh | leftover todo comment here |\n| none | EX008 | src/app.js:318 | leftover todo comment here |\n| error | EX003 | src/util.js:63 | line too long here |\n| error | EX004 | \\(no location\\) | sql built by string concatenation here |\n| warning | EX005 | \\(no location\\) | weak hash algorithm here |\n| error | EX005 | \\(no location\\) | weak hash algorithm here |\n| note | EX002 | lib/db/query.py:314 | unused variable here |\n| error | EX004 | lib/db/query.py:301 | sql built by string concatenation here |\n| none | EX008 | src/legacy/report\\_builder.cs:100 | leftover todo comment here |\n| note | EX002 | cmd/server/main.go:194 | unused variable here |\n| note | EX006 | lib/db/query.py:27 | hard-coded credential here |\n| note | EX002 | src/util.js:307 | unused variable here |\n| none | EX008 | lib/db/query.py:400 | leftover todo comment here |\n| error | EX004 | src/api/orders.ts:170 | sql built by string concatenation here |\n| warning | EX007 | cmd/server/main.go:181 | form without csrf token here |\n| note | EX006 | src/legacy/report\\_builder.cs:235 | hard-coded credential here |\n| error | EX001 | cmd/server/main.go:334 | avoid eval here |\n| note | EX002 | src/app.js:135 | unused variable here |\n| warning | EX003 | src/app.js:221 | line too long here |\n| none | EX001 | lib/db/query.py:210 | avoid eval here |\n| warning | EX003 | src/util.js:186 | line too long here |\n| warning | EX003 | src/app.js:53 | line too long here |\n| warning | EX003 | src/api/orders.ts:215 | line too long here |\n| none | EX002 | web/views/cart.html:25 | unused variable here |\n| note | EX006 | src/api/orders.ts:339 | hard-coded credential here |\n| error | EX006 | src/legacy/report\\_builder.cs | hard-coded credential here |\n| none | EX007 | cmd/server/main.go:347 | form without csrf token here |\n| warning | EX007 | src/legacy/report\\_builder.cs:132 | form without csrf token here |\n| error | EX006 | lib/db/query.py:318 | hard-coded credential here |\n| error | EX006 | src/util.js:277 | hard-coded credential here |\n| note | EX006 | web/views/cart.html | hard-coded credential here |\n| error | EX006 | \\(no location\\) | hard-coded credential here |\n| error | EX002 | lib/db/query.py:329 | unused variable here |\n| warning | EX008 | src/app.js | leftover todo comment here |\n| warning | EX003 | src/legacy/report\\_builder.cs:142 | line too long here |\n| note | EX002 | web/views/cart.html:121 | unused variable here |\n| warning | EX001 | \\(no location\\) | avoid eval here |\n| none | EX008 | web/views/cart.html:288 | leftover todo comment here |\n| note | EX001 | src/app.js:230 | avoid eval here |\n| none | EX008 | \\(no location\\) | leftover todo comment here |\n| warning | EX003 | src/legacy/report\\_builder.cs:12 | line too long here |\n| warning | EX007 | lib/db/query.py | form without csrf token here |\n| none | EX002 | web/views/cart.html:307 | unused variable here |\n| warning | EX007 | src/legacy/report\\_builder.cs:166 | form without csrf token here |\n| note | EX002 | cmd/server/main.go:1 | unused variable here |\n| error | EX004 | lib/db/query.py:336 | sql built by string concatenation here |\n| none | EX007 | src/util.js:80 | form without csrf token here |\n| error | EX005 | web/views/cart.html:25 | weak hash algorithm here |\n| warning | EX007 | src/app.js | form without csrf token here |\n| none | EX004 | src/app.js:295 | sql built by string concatenation here |\n| none | EX005 | src/util.js:325 | weak hash algorithm here |\n| error | EX004 | src/api/orders.ts:383 | sql built by string concatenation here |\n| warning | EX003 | web/views/cart.html | line too long here |\n| error | EX004 | lib/db/query.py | sql built by string concatenation here |\n| error | EX008 | scripts/deploy.sh:29 | leftover todo comment here |\n| error | EX001 | src/app.js:374 | avoid eval here |\n| warning | EX007 | src/api/orders.ts:154 | form without csrf token here |\n| note | EX004 | cmd/server/main.go:368 | sql built by string concatenation here |\n| warning | EX008 | \\(no location\\) | leftover todo comment here |\n| note | EX002 | src/legacy/report\\_builder.cs:288 | unused variable here |\n| warning | EX007 | lib/db/query.py | form without csrf token here |\n| error | EX004 | src/util.js:340 | sql built by string concatenation here |\n| none | EX008 | cmd/server/main.go:138 | leftover todo comment here |\n| error | EX001 | web/views/cart.html:223 | avoid eval here |\n| warning | EX005 | src/api/orders.ts:332 | weak hash algorithm here |\n| error | EX007 | src/util.js:116 | form without csrf token here |\n| none | EX008 | scripts/deploy.sh:320 | leftover todo comment here |\n| warning | EX003 | src/util.js:104 | line too long here |\n| error | EX004 | src/util.js:167 | sql built by string concatenation here |\n| warning | EX007 | src/api/orders.ts:73 | form without csrf token here |\n| warning | EX005 | src/api/orders.ts | weak hash algorithm here |\n| note | EX001 | scripts/deploy.sh:294 | avoid eval here |\n| note | EX008 | lib/db/query.py:192 | leftover todo comment here |\n| note | EX007 | src/util.js:94 | form without csrf token here |\n| warning | EX008 | src/app.js:96 | leftover todo comment here |\n| none | EX002 | src/legacy/report\\_builder.cs:245 | unused variable here |\n| error | EX006 | src/util.js:175 | hard-coded credential here |\n| warning | EX007 | lib/db/query.py:292 | form without csrf token here |\n| none | EX002 | web/views/cart.html:5 | unused variable here |\n| error | EX001 | web/views/cart.html:62 | avoid eval here |\n| none | EX002 | scripts/deploy.sh:70 | unused variable here |\n| note | EX002 | src/app.js:273 | unused variable here |\n| error | EX001 | lib/db/query.py:227 | avoid eval here |\n| note | EX005 | web/views/cart.html:298 | weak hash algorithm here |\n| none | EX008 | lib/db/query.py:114 | leftover todo comment here |\n| error | EX005 | src/api/orders.ts:172 | weak hash algorithm here |\n| error | EX001 | src/legacy/report\\_builder.cs:61 | avoid eval here |\n| warning | EX003 | lib/db/query.py:228 | line too long here |\n| warning | EX004 | web/views/cart.html:170 | sql built by string concatenation here |\n| error | EX006 | src/app.js | hard-coded credential here |\n| note | EX002 | src/legacy/report\\_builder.cs:268 | unused variable here |\n| error | EX006 | src/api/orders.ts:73 | hard-coded credential here |\n| warning | EX005 | cmd/server/main.go:331 | weak hash algorithm here |\n| none | EX008 | src/app.js:347 | leftover todo comment here |\n| note | EX002 | src/legacy/report\\_builder.cs:108 | unused variable here |\n| warning | EX003 | web/views/cart.html:286 | line too long here |\n| error | EX001 | cmd/server/main.go:118 | avoid eval here |\n| error | EX006 | scripts/deploy.sh:12 | hard-coded credential here |\n| warning | EX005 | scripts/deploy.sh:231 | weak hash algorithm here |\n| error | EX004 | src/util.js:206 | sql built by string concatenation here |\n| warning | EX007 | src/util.js:241 | form without csrf token here |\n| error | EX006 | lib/db/query.py:254 | hard-coded credential here |\n| none | EX002 | src/util.js:254 | unused variable here |\n| warning | EX007 | lib/db/query.py | form without csrf token here |\n| none | EX008 | web/views/cart.html | leftover todo comment here |\n| error | EX004 | cmd/server/main.go:191 | sql built by string concatenation here |\n| warning | EX007 | \\(no location\\) | form without csrf token here |\n| error | EX001 | src/util.js:140 | avoid eval here |\n| none | EX002 | src/api/orders.ts:87 | unused variable here |\n| error | EX004 | src/api/orders.ts:52 | sql built by string concatenation here |\n| none | EX002 | web/views/cart.html | unused variable here |\n| note | EX002 | web/views/cart.html:19 | unused variable here |\n| note | EX002 | src/app.js:375 | unused variable here |\n| error | EX001 | lib/db/query.py:231 | avoid eval here |\n| warning | EX007 | src/util.js | form without csrf token here |\n| error | EX001 | src/util.js | avoid eval here |\n| none | EX008 | src/util.js:146 | leftover todo comment here |\n| none | EX002 | scripts/deploy.sh:217 | unused variable here |\n| none | EX007 | web/views/cart.html:322 | form without csrf token here |\n| warning | EX003 | src/util.js | line too long here |\n| error | EX001 | cmd/server/main.go:123 | avoid eval here |\n| note | EX002 | src/api/orders.ts:171 | unused variable here |\n| error | EX008 | scripts/deploy.sh:332 | leftover todo comment here |\n| error | EX001 | lib/db/query.py:182 | avoid eval here |\n| none | EX008 | src/util.js:116 | leftover todo comment here |\n| error | EX004 | lib/db/query.py:83 | sql built by string concatenation here |\n| warning | EX007 | web/views/cart.html:172 | form without csrf token here |\n| error | EX006 | web/views/cart.html:35 | hard-coded credential here |\n| warning | EX005 | src/util.js:149 | weak hash algorithm here |\n| error | EX001 | scripts/deploy.sh:55 | avoid eval here |\n| note | EX002 | src/api/orders.ts:150 | unused variable here |\n| warning | EX005 | lib/db/query.py:183 | weak hash algorithm here |\n| error | EX006 | src/legacy/report\\_builder.cs | hard-coded credential here |\n| error | EX001 | src/util.js:214 | avoid eval here |\n| error | EX006 | \\(no location\\) | hard-coded credential here |\n| error | EX001 | src/util.js:339 | avoid eval here |\n| warning | EX005 | scripts/deploy.sh:78 | weak hash algorithm here |\n| none | EX001 | web/views/cart.html | avoid eval here |\n| warning | EX005 | cmd/server/main.go:30 | weak hash algorithm here |\n| error | EX004 | lib/db/query.py:395 | sql built by string concatenation here |\n| note | EX007 | src/app.js:86 | form without csrf token here |\n| none | EX008 | cmd/server/main.go:102 | leftover todo comment here |\n| error | EX004 | src/api/orders.ts | sql built by string concatenation here |\n| note | EX002 | lib/db/query.py:162 | unused variable here |\n| warning | EX003 | src/util.js | line too long here |\n| warning | EX005 | \\(no location\\) | weak hash algorithm here |\n| warning | EX005 | lib/db/query.py | weak hash algorithm here |\n| error | EX004 | scripts/deploy.sh:5 | sql built by string concatenation here |\n| none | EX003 | \\(no location\\) | line too long here |\n| error | EX001 | lib/db/query.py:146 | avoid eval here |\n| error | EX004 | src/util.js:171 | sql built by string concatenation here |\n| none | EX001 | lib/db/query.py | avoid eval here |\n| error | EX004 | lib/db/query.py:220 | sql built by string concatenation here |\n| note | EX008 | src/legacy/report\\_builder.cs:109 | leftover todo comment here |\n| error | EX006 | \\(no location\\) | hard-coded credential here |\n| error | EX001 | scripts/deploy.sh:102 | avoid eval here |\n| warning | EX007 | lib/db/query.py:145 | form without csrf token here |\n| warning | EX003 | src/legacy/report\\_builder.cs:96 | line too long here |\n| error | EX001 | src/legacy/report\\_builder.cs:45 | avoid eval here |\n| error | EX004 | src/app.js:144 | sql built by string concatenation here |\n| error | EX001 | web/views/cart.html:296 | avoid eval here |\n| error | EX006 | lib/db/query.py:60 | hard-coded credential here |\n| error | EX006 | src/api/orders.ts:50 | hard-coded credential here |\n| none | EX003 | src/util.js:113 | line too long here |\n| error | EX004 | lib/db/query.py:99 | sql built by string concatenation here |\n| warning | EX007 | src/api/orders.ts:333 | form without csrf token here |\n| note | EX007 | scripts/deploy.sh:249 | form without csrf token here |\n| warning | EX003 | cmd/server/main.go:229 | line too long here |\n| error | EX005 | scripts/deploy.sh:377 | weak hash algorithm here |\n| warning | EX005 | src/legacy/report\\_builder.cs:291 | weak hash algorithm here |\n| note | EX007 | \\(no location\\) | form without csrf token here |\n| error | EX001 | scripts/deploy.sh:88 | avoid eval here |\n| none | EX008 | src/util.js:29 | leftover todo comment here |\n| none | EX008 | src/app.js:213 | leftover todo comment here |\n| error | EX006 | src/api/orders.ts:95 | hard-coded credential here |\n| error | EX005 | lib/db/query.py:144 | weak hash algorithm here |\n| none | EX008 | src/legacy/report\\_builder.cs:284 | leftover todo comment here |\n| warning | EX007 | scripts/deploy.sh:171 | form without csrf token here |\n| warning | EX005 | web/views/cart.html:208 | weak hash algorithm here |\n| error | EX001 | scripts/deploy.sh:382 | avoid eval here |\n| warning | EX005 | web/views/cart.html:108 | weak hash algorithm here |\n| note | EX002 | scripts/deploy.sh:270 | unused variable here |\n| note | EX007 | src/legacy/report\\_builder.cs:184 | form without csrf token here |\n| error | EX004 | src/app.js:21 | sql built by string concatenation here |\n\n639 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n199 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX002 | src/app.js | external | rejected |  |\n| EX002 | scripts/deploy.sh:278 | external | accepted | kept for API compatibility |\n| EX004 | web/views/cart.html:345 | inSource | underReview | kept for API compatibility |\n| EX001 | lib/db/query.py:93 | external | accepted |  |\n| EX004 | src/legacy/report\\_builder.cs:58 | inSource | accepted | false positive |\n| EX007 | lib/db/query.py:364 | external | underReview | false positive |\n| EX007 | lib/db/query.py:160 | inSource | underReview |  |\n| EX001 | src/app.js:393 | external | accepted |  |\n| EX007 | src/app.js:277 | external | accepted |  |\n| EX005 | src/util.js:25 | inSource | underReview | test data only |\n| EX006 | \\(no location\\) | inSource | accepted |  |\n| EX002 | scripts/deploy.sh:291 | external | accepted | false positive |\n| EX004 | lib/db/query.py:179 | inSource | underReview | kept for API compatibility |\n| EX001 | src/legacy/report\\_builder.cs:242 | inSource | rejected |  |\n| EX008 | lib/db/query.py:294 | inSource | rejected | kept for API compatibility |\n| EX005 | src/api/orders.ts:60 | inSource | accepted | false positive |\n| EX008 | web/views/cart.html:163 | inSource | accepted |  |\n| EX002 | web/views/cart.html | inSource | accepted | test data only |\n| EX006 | lib/db/query.py | inSource | accepted | false positive |\n| EX005 | lib/db/query.py:87 | inSource | accepted | false positive |\n| EX002 | cmd/server/main.go:301 | inSource | accepted | test data only |\n| EX003 | cmd/server/main.go:304 | external | underReview | false positive |\n| EX004 | cmd/server/main.go:139 | external | underReview |  |\n| EX006 | src/app.js:275 | external | accepted | test data only |\n| EX003 | src/legacy/report\\_builder.cs:92 | inSource | accepted | test data only |\n| EX001 | cmd/server/main.go | external | underReview | false positive |\n| EX001 | cmd/server/main.go:356 | inSource | rejected |  |\n| EX007 | lib/db/query.py:21 | inSource | accepted | test data only |\n| EX002 | cmd/server/main.go:118 | external | accepted |  |\n| EX002 | src/util.js:14 | inSource | accepted | kept for API compatibility |\n| EX004 | cmd/server/main.go:6 | inSource | accepted | false positive |\n| EX003 | src/app.js:183 | inSource | accepted | false positive |\n| EX001 | scripts/deploy.sh:128 | inSource | underReview | false positive |\n| EX004 | src/legacy/report\\_builder.cs:58 | inSource | rejected |  |\n| EX006 | cmd/server/main.go:59 | inSource | underReview | test data only |\n| EX006 | src/app.js:133 | inSource | accepted | kept for API compatibility |\n| EX003 | \\(no location\\) | external | accepted | test data only |\n| EX007 | cmd/server/main.go:7 | external | rejected | false positive |\n| EX006 | src/api/orders.ts:177 | inSource | underReview | kept for API compatibility |\n| EX007 | cmd/server/main.go:207 | inSource | accepted |  |\n| EX005 | web/views/cart.html:119 | inSource | rejected | test data only |\n| EX007 | web/views/cart.html | external | accepted | kept for API compatibility |\n| EX002 | src/api/orders.ts:44 | external | accepted | false positive |\n| EX001 | lib/db/query.py:390 | inSource | accepted | test data only |\n| EX006 | cmd/server/main.go | inSource | rejected | false positive |\n| EX005 | cmd/server/main.go:174 | inSource | underReview | kept for API compatibility |\n| EX006 | src/app.js:314 | external | rejected | kept for API compatibility |\n| EX001 | web/views/cart.html:96 | inSource | accepted | false positive |\n| EX003 | src/api/orders.ts:243 | inSource | rejected | kept for API compatibility |\n| EX003 | src/api/orders.ts:279 | inSource | rejected | kept for API compatibility |\n| EX006 | web/views/cart.html:183 | external | accepted | false positive |\n| EX004 | src/api/orders.ts | external | accepted | test data only |\n| EX006 | src/app.js:22 | external | accepted |  |\n| EX006 | src/api/orders.ts:279 | external | underReview |  |\n| EX003 | src/legacy/report\\_builder.cs:48 | inSource | accepted | test data only |\n| EX006 | src/api/orders.ts | inSource | accepted |  |\n| EX007 | src/util.js:252 | external | rejected |  |\n| EX003 | src/legacy/report\\_builder.cs:328 | external | accepted |  |\n| EX008 | \\(no location\\) | inSource | underReview |  |\n| EX005 | lib/db/query.py:97 | external | underReview | false positive |\n| EX001 | cmd/server/main.go:125 | external | rejected | false positive |\n| EX007 | lib/db/query.py:120 | external | rejected | false positive |\n| EX007 | src/legacy/report\\_builder.cs:61 | external | underReview | false positive |\n| EX004 | cmd/server/main.go:298 | inSource | accepted | test data only |\n| EX006 | src/util.js | external | accepted | test data only |\n| EX007 | cmd/server/main.go:13 | inSource | rejected | kept for API compatibility |\n| EX002 | scripts/deploy.sh:163 | inSource | underReview |  |\n| EX007 | src/api/orders.ts:152 | external | rejected | false positive |\n| EX004 | web/views/cart.html:244 | external | accepted |  |\n| EX008 | src/util.js | inSource | rejected | false positive |\n| EX006 | cmd/server/main.go:318 | inSource | underReview | test data only |\n| EX002 | lib/db/query.py:354 | external | underReview | kept for API compatibility |\n| EX004 | src/api/orders.ts | inSource | accepted | kept for API compatibility |\n| EX002 | lib/db/query.py:54 | inSource | accepted |  |\n| EX001 | \\(no location\\) | external | accepted | kept for API compatibility |\n| EX003 | src/legacy/report\\_builder.cs:202 | external | accepted | test data only |\n| EX006 | src/app.js | external | accepted | kept for API compatibility |\n| EX002 | src/legacy/report\\_builder.cs:49 | external | rejected |  |\n| EX007 | src/api/orders.ts:102 | inSource | rejected |  |\n| EX005 | src/api/orders.ts:147 | inSource | accepted | false positive |\n| EX004 | src/api/orders.ts:110 | external | rejected |  |\n| EX007 | scripts/deploy.sh:296 | external | accepted | false positive |\n| EX008 | src/util.js | inSource | rejected | false positive |\n| EX001 | scripts/deploy.sh:349 | inSource | accepted | test data only |\n| EX007 | src/legacy/report\\_builder.cs:30 | external | underReview |  |\n| EX002 | cmd/server/main.go:232 | external | accepted | test data only |\n| EX004 | scripts/deploy.sh:40 | external | accepted | false positive |\n| EX002 | web/views/cart.html:248 | inSource | accepted | kept for API compatibility |\n| EX005 | scripts/deploy.sh:80 | external | accepted |  |\n| EX007 | cmd/server/main.go:70 | external | accepted |  |\n| EX005 | src/app.js:66 | inSource | accepted | false positive |\n| EX004 | web/views/cart.html:218 | external | underReview | kept for API compatibility |\n| EX004 | src/util.js:39 | external | accepted | kept for API compatibility |\n| EX008 | web/views/cart.html:113 | inSource | underReview |  |\n| EX001 | \\(no location\\) | inSource | accepted | false positive |\n| EX005 | scripts/deploy.sh:138 | external | rejected | kept for API compatibility |\n| EX008 | web/views/cart.html:48 | inSource | accepted | false positive |\n| EX002 | web/views/cart.html:244 | inSource | accepted | false positive |\n| EX001 | web/views/cart.html:291 | external | accepted | test data only |\n| EX004 | scripts/deploy.sh:332 | inSource | underReview |  |\n| EX003 | src/util.js | inSource | underReview |  |\n| EX002 | lib/db/query.py | external | rejected | false positive |\n| EX006 | lib/db/query.py:314 | inSource | underReview |  |\n| EX004 | scripts/deploy.sh:253 | inSource | underReview | test data only |\n| EX001 | \\(no location\\) | inSource | rejected | kept for API compatibility |\n| EX003 | src/api/orders.ts:300 | external | underReview | kept for API compatibility |\n| EX001 | lib/db/query.py | inSource | underReview |  |\n| EX005 | src/app.js:389 | external | accepted | test data only |\n| EX008 | src/api/orders.ts:80 | inSource | accepted | test data only |\n| EX002 | lib/db/query.py:199 | external | underReview | kept for API compatibility |\n| EX003 | \\(no location\\) | external | rejected | test data only |\n| EX003 | cmd/server/main.go:386 | inSource | accepted | kept for API compatibility |\n| EX003 | src/api/orders.ts:66 | external | rejected | kept for API compatibility |\n| EX005 | src/api/orders.ts:141 | inSource | rejected | test data only |\n| EX002 | web/views/cart.html:368 | inSource | accepted | false positive |\n| EX002 | lib/db/query.py:1 | inSource | accepted | kept for API compatibility |\n| EX006 | lib/db/query.py:164 | external | underReview |  |\n| EX008 | src/util.js:146 | inSource | rejected | test data only |\n| EX001 | cmd/server/main.go:116 | external | rejected |  |\n| EX007 | cmd/server/main.go:4 | external | accepted | test data only |\n| EX003 | scripts/deploy.sh:238 | external | accepted |  |\n| EX002 | scripts/deploy.sh:240 | external | accepted |  |\n| EX003 | scripts/deploy.sh:344 | inSource | accepted | kept for API compatibility |\n| EX005 | cmd/server/main.go:10 | inSource | underReview |  |\n| EX007 | cmd/server/main.go:317 | inSource | rejected |  |\n| EX007 | src/util.js:177 | inSource | accepted |  |\n| EX003 | lib/db/query.py:120 | inSource | rejected | test data only |\n| EX003 | cmd/server/main.go:10 | inSource | rejected | kept for API compatibility |\n| EX006 | src/legacy/report\\_builder.cs:243 | inSource | underReview | test data only |\n| EX005 | web/views/cart.html:37 | inSource | accepted | test data only |\n| EX007 | scripts/deploy.sh:357 | external | accepted | kept for API compatibility |\n| EX008 | src/legacy/report\\_builder.cs:74 | external | underReview | false positive |\n| EX001 | lib/db/query.py:69 | inSource | accepted | test data only |\n| EX001 | scripts/deploy.sh:201 | external | accepted |  |\n| EX006 | lib/db/query.py | external | accepted | kept for API compatibility |\n| EX008 | src/util.js | external | rejected |  |\n| EX002 | \\(no location\\) | inSource | accepted | kept for API compatibility |\n| EX005 | src/legacy/report\\_builder.cs:99 | external | rejected | test data only |\n| EX001 | web/views/cart.html | external | accepted |  |\n| EX003 | web/views/cart.html:21 | inSource | rejected | test data only |\n| EX005 | scripts/deploy.sh | inSource | underReview | false positive |\n| EX008 | lib/db/query.py:362 | external | underReview | kept for API compatibility |\n| EX005 | cmd/server/main.go:2 | external | accepted |  |\n| EX008 | scripts/deploy.sh:159 | inSource | underReview | test data only |\n| EX008 | src/util.js:314 | external | underReview | test data only |\n| EX004 | src/app.js:185 | external | accepted | false positive |\n| EX002 | scripts/deploy.sh:122 | inSource | rejected | false positive |\n| EX004 | src/app.js:11 | external | rejected |  |\n| EX002 | web/views/cart.html:294 | external | accepted |  |\n| EX006 | src/legacy/report\\_builder.cs | external | accepted | false positive |\n| EX004 | lib/db/query.py | external | underReview |  |\n| EX005 | src/legacy/report\\_builder.cs:20 | external | rejected | kept for API compatibility |\n| EX003 | \\(no location\\) | inSource | accepted | kept for API compatibility |\n| EX006 | src/legacy/report\\_builder.cs:394 | inSource | accepted | false positive |\n| EX006 | web/views/cart.html:252 | external | rejected | kept for API compatibility |\n| EX007 | src/app.js:327 | inSource | accepted |  |\n| EX007 | src/legacy/report\\_builder.cs:374 | inSource | accepted | kept for API compatibility |\n| EX008 | scripts/deploy.sh:145 | external | underReview |  |\n| EX003 | \\(no location\\) | external | underReview |  |\n| EX005 | web/views/cart.html:26 | inSource | accepted | false positive |\n| EX003 | web/views/cart.html:272 | external | accepted |  |\n| EX002 | cmd/server/main.go | external | rejected | false positive |\n| EX002 | web/views/cart.html:158 | external | accepted |  |\n| EX003 | scripts/deploy.sh:329 | inSource | accepted | kept for API compatibility |\n| EX007 | \\(no location\\) | inSource | underReview | kept for API compatibility |\n| EX004 | src/legacy/report\\_builder.cs:12 | external | accepted | kept for API compatibility |\n| EX001 | src/legacy/report\\_builder.cs:164 | inSource | accepted |  |\n| EX008 | src/legacy/report\\_builder.cs:118 | inSource | accepted | kept for API compatibility |\n| EX006 | scripts/deploy.sh:19 | external | accepted | kept for API compatibility |\n| EX007 | src/api/orders.ts:199 | inSource | underReview |  |\n| EX003 | src/app.js:384 | external | accepted |  |\n| EX004 | lib/db/query.py:230 | inSource | accepted |  |\n| EX004 | src/legacy/report\\_builder.cs:320 | external | accepted | false positive |\n| EX004 | src/legacy/report\\_builder.cs:236 | inSource | accepted |  |\n| EX008 | scripts/deploy.sh:338 | external | underReview | false positive |\n| EX008 | cmd/server/main.go:88 | external | accepted | kept for API compatibility |\n| EX005 | \\(no location\\) | external | accepted |  |\n| EX005 | src/api/orders.ts | inSource | underReview |  |\n| EX006 | src/legacy/report\\_builder.cs:268 | external | underReview |  |\n| EX002 | src/api/orders.ts | external | accepted |  |\n| EX003 | src/util.js:283 | external | underReview | kept for API compatibility |\n| EX004 | scripts/deploy.sh:122 | inSource | accepted | false positive |\n| EX001 | web/views/cart.html | external | underReview | false positive |\n| EX002 | \\(no location\\) | inSource | rejected |  |\n| EX002 | cmd/server/main.go:359 | external | rejected | test data only |\n| EX004 | src/legacy/report\\_builder.cs:178 | inSource | accepted | kept for API compatibility |\n| EX002 | lib/db/query.py:216 | external | rejected |  |\n| EX008 | src/legacy/report\\_builder.cs:377 | external | underReview | kept for API compatibility |\n| EX002 | lib/db/query.py:132 | external | rejected | test data only |\n| EX004 | src/api/orders.ts:242 | inSource | underReview | test data only |\n| EX006 | lib/db/query.py | inSource | accepted |  |\n| EX006 | scripts/deploy.sh:206 | inSource | underReview | test data only |\n| EX005 | src/api/orders.ts | inSource | accepted |  |\n| EX007 | \\(no location\\) | inSource | rejected |  |\n| EX005 | src/util.js:256 | inSource | underReview |  |\n| EX005 | lib/db/query.py | inSource | underReview | test data only |\n| EX007 | scripts/deploy.sh:51 | external | rejected | test data only |\n| EX004 | cmd/server/main.go:142 | external | rejected | kept for API compatibility |\n| EX005 | src/legacy/report\\_builder.cs:135 | external | rejected | false positive |\n| EX006 | scripts/deploy.sh:111 | external | rejected |  |\n| EX005 | src/api/orders.ts | external | rejected | kept for API compatibility |\n| EX007 | web/views/cart.html:293 | external | rejected |  |\n| EX002 | src/api/orders.ts:234 | external | rejected | kept for API compatibility |\n| EX003 | src/app.js:330 | inSource | accepted | kept for API compatibility |\n| EX001 | scripts/deploy.sh:53 | inSource | underReview |  |\n| EX003 | \\(no location\\) | external | rejected | test data only |\n| EX005 | cmd/server/main.go:391 | external | accepted | kept for API compatibility |\n| EX007 | src/app.js:124 | inSource | accepted |  |\n| EX004 | scripts/deploy.sh:47 | external | accepted |  |\n| EX003 | lib/db/query.py | external | accepted |  |\n| EX001 | src/legacy/report\\_builder.cs | external | accepted | false positive |\n| EX005 | lib/db/query.py:91 | external | rejected | test data only |\n| EX002 | cmd/server/main.go:316 | inSource | accepted | false positive |\n| EX001 | src/api/orders.ts:181 | external | accepted |  |\n| EX006 | web/views/cart.html:198 | external | rejected |  |\n| EX002 | src/util.js:46 | inSource | accepted | false positive |\n| EX001 | src/api/orders.ts:109 | inSource | accepted | false positive |\n| EX004 | web/views/cart.html | inSource | accepted |  |\n| EX005 | src/util.js:192 | inSource | accepted | false positive |\n| EX004 | web/views/cart.html:132 | inSource | underReview | kept for API compatibility |\n| EX001 | lib/db/query.py:229 | inSource | underReview | test data only |\n| EX001 | scripts/deploy.sh:351 | external | accepted |  |\n| EX003 | src/util.js:201 | external | accepted | test data only |\n| EX007 | src/app.js:292 | inSource | accepted |  |\n| EX006 | scripts/deploy.sh:354 | inSource | accepted |  |\n| EX001 | src/legacy/report\\_builder.cs:345 | external | accepted |  |\n| EX006 | scripts/deploy.sh:315 | external | underReview | false positive |\n| EX008 | src/legacy/report\\_builder.cs:137 | external | rejected | false positive |\n| EX006 | web/views/cart.html:398 | inSource | underReview | kept for API compatibility |\n| EX004 | web/views/cart.html | inSource | accepted |  |\n| EX006 | src/api/orders.ts:43 | external | rejected | kept for API compatibility |\n| EX002 | src/legacy/report\\_builder.cs:76 | inSource | rejected |  |\n| EX004 | web/views/cart.html:364 | external | rejected | false positive |\n| EX008 | src/api/orders.ts:59 | external | underReview |  |\n| EX003 | cmd/server/main.go:295 | inSource | rejected | test data only |\n| EX005 | src/api/orders.ts:314 | external | rejected | kept for API compatibility |\n| EX003 | \\(no location\\) | inSource | underReview | test data only |\n| EX006 | \\(no location\\) | inSource | rejected | kept for API compatibility |\n| EX008 | web/views/cart.html | external | underReview |  |\n| EX001 | scripts/deploy.sh:341 | external | rejected | kept for API compatibility |\n| EX008 | src/app.js | external | accepted | kept for API compatibility |\n| EX004 | src/legacy/report\\_builder.cs:73 | external | underReview | kept for API compatibility |\n| EX003 | src/legacy/report\\_builder.cs:369 | external | accepted | false positive |\n| EX006 | src/api/orders.ts:96 | inSource | accepted |  |\n| EX002 | scripts/deploy.sh:366 | external | underReview | kept for API compatibility |\n| EX006 | web/views/cart.html:214 | external | accepted |  |\n| EX004 | scripts/deploy.sh:13 | external | accepted | kept for API compatibility |\n| EX006 | src/api/orders.ts:173 | external | accepted | false positive |\n| EX008 | src/app.js:119 | inSource | underReview | test data only |\n| EX008 | src/api/orders.ts:397 | external | underReview | false positive |\n| EX005 | \\(no location\\) | inSource | underReview | kept for API compatibility |\n| EX006 | scripts/deploy.sh:296 | external | accepted | test data only |\n| EX004 | lib/db/query.py:113 | external | accepted | false positive |\n| EX008 | cmd/server/main.go:10 | inSource | accepted | kept for API compatibility |\n| EX002 | src/api/orders.ts:323 | external | accepted | kept for API compatibility |\n| EX008 | src/app.js:106 | external | rejected | kept for API compatibility |\n| EX006 | src/util.js:365 | inSource | accepted |  |\n| EX007 | src/app.js:153 | inSource | underReview |  |\n| EX003 | cmd/server/main.go:333 | external | rejected |  |\n| EX008 | cmd/server/main.go:386 | external | accepted |  |\n| EX005 | src/util.js | external | accepted |  |\n| EX006 | src/api/orders.ts:34 | inSource | rejected | false positive |\n| EX005 | cmd/server/main.go:86 | inSource | accepted |  |\n| EX006 | web/views/cart.html:308 | inSource | underReview |  |\n| EX004 | \\(no location\\) | external | underReview | false positive |\n| EX002 | web/views/cart.html:220 | inSource | accepted | kept for API compatibility |\n| EX008 | lib/db/query.py:383 | inSource | accepted | test data only |\n| EX002 | src/util.js | inSource | underReview | test data only |\n| EX003 | src/app.js | external | rejected | test data only |\n| EX007 | lib/db/query.py:387 | external | rejected | test data only |\n| EX007 | web/views/cart.html:31 | external | accepted |  |\n| EX005 | web/views/cart.html:190 | inSource | rejected |  |\n| EX006 | lib/db/query.py:337 | external | accepted | false positive |\n| EX007 | src/util.js:70 | external | underReview |  |\n| EX005 | src/util.js:63 | external | underReview |  |\n| EX003 | scripts/deploy.sh:256 | inSource | accepted |  |\n| EX007 | src/app.js:77 | external | underReview | false positive |\n| EX007 | scripts/deploy.sh:397 | inSource | accepted | kept for API compatibility |\n| EX002 | src/api/orders.ts:25 | external | accepted | false positive |\n| EX005 | src/util.js:318 | external | underReview |  |\n| EX003 | src/util.js:250 | inSource | accepted | kept for API compatibility |\n| EX007 | src/util.js | inSource | rejected | kept for API compatibility |\n| EX005 | src/util.js:227 | external | rejected | kept for API compatibility |\n| EX006 | src/api/orders.ts | inSource | accepted | test data only |\n| EX007 | src/api/orders.ts:67 | external | rejected | kept for API compatibility |\n| EX006 | scripts/deploy.sh:146 | inSource | underReview |  |\n| EX005 | web/views/cart.html:122 | inSource | rejected | test data only |\n| EX005 | src/api/orders.ts:276 | external | accepted | false positive |\n| EX005 | cmd/server/main.go:52 | external | accepted |  |\n| EX006 | cmd/server/main.go | external | underReview | false positive |\n| EX001 | lib/db/query.py | external | accepted |  |\n| EX002 | src/app.js:119 | external | accepted |  |\n| EX005 | src/util.js | external | accepted |  |\n| EX001 | scripts/deploy.sh:255 | external | underReview | false positive |\n| EX007 | cmd/server/main.go:151 | external | accepted | kept for API compatibility |\n| EX001 | web/views/cart.html:116 | inSource | underReview | false positive |\n| EX002 | \\(no location\\) | inSource | accepted | kept for API compatibility |\n| EX008 | cmd/server/main.go:112 | external | accepted | test data only |\n| EX004 | \\(no location\\) | external | underReview |  |\n| EX001 | \\(no location\\) | external | rejected | false positive |\n| EX002 | lib/db/query.py | inSource | accepted | test data only |\n| EX007 | src/legacy/report\\_builder.cs:107 | inSource | accepted |  |\n| EX008 | web/views/cart.html | external | rejected | false positive |\n| EX006 | src/app.js:395 | external | accepted |  |\n| EX004 | src/legacy/report\\_builder.cs:320 | external | accepted | test data only |\n| EX001 | web/views/cart.html:343 | external | accepted | false positive |\n| EX001 | web/views/cart.html:172 | external | accepted | kept for API compatibility |\n| EX004 | scripts/deploy.sh:171 | inSource | accepted | false positive |\n| EX004 | src/api/orders.ts:384 | inSource | underReview | test data only |\n| EX008 | src/util.js | external | rejected |  |\n| EX008 | web/views/cart.html:345 | external | accepted | test data only |\n| EX008 | src/api/orders.ts:382 | inSource | accepted | kept for API compatibility |\n| EX002 | cmd/server/main.go:274 | external | accepted |  |\n| EX001 | src/app.js:367 | inSource | accepted | test data only |\n| EX008 | src/legacy/report\\_builder.cs:113 | external | accepted | kept for API compatibility |\n| EX003 | \\(no location\\) | external | underReview |  |\n| EX008 | \\(no location\\) | inSource | accepted |  |\n| EX005 | src/util.js:107 | inSource | underReview |  |\n| EX005 | web/views/cart.html:245 | inSource | rejected | kept for API compatibility |\n| EX003 | web/views/cart.html:282 | external | accepted | kept for API compatibility |\n| EX002 | src/app.js:273 | inSource | rejected | kept for API compatibility |\n| EX008 | src/util.js | external | accepted | test data only |\n| EX008 | lib/db/query.py:52 | external | rejected |  |\n| EX002 | cmd/server/main.go:208 | inSource | underReview | test data only |\n| EX001 | scripts/deploy.sh:266 | inSource | accepted |  |\n| EX004 | cmd/server/main.go:271 | external | accepted | kept for API compatibility |\n| EX003 | scripts/deploy.sh:274 | external | underReview | false positive |\n| EX007 | src/api/orders.ts:129 | inSource | accepted | false positive |\n| EX004 | src/app.js:233 | inSource | accepted | false positive |\n| EX005 | src/legacy/report\\_builder.cs:329 | external | underReview |  |\n| EX008 | web/views/cart.html:286 | external | underReview | false positive |\n| EX005 | lib/db/query.py:277 | external | rejected | kept for API compatibility |\n| EX001 | src/legacy/report\\_builder.cs:282 | inSource | rejected | kept for API compatibility |\n| EX004 | src/app.js:236 | external | accepted | test data only |\n| EX004 | src/api/orders.ts | inSource | accepted |  |\n| EX006 | src/util.js:288 | external | accepted |  |\n| EX006 | src/app.js | external | underReview |  |\n| EX007 | lib/db/query.py:331 | external | underReview | false positive |\n| EX007 | web/views/cart.html:360 | external | accepted | kept for API compatibility |\n| EX001 | src/api/orders.ts:257 | inSource | accepted |  |\n| EX007 | lib/db/query.py:379 | external | accepted |  |\n| EX002 | src/api/orders.ts | external | rejected |  |\n| EX005 | cmd/server/main.go | inSource | rejected |  |\n| EX005 | src/app.js:358 | external | underReview | test data only |\n| EX003 | cmd/server/main.go:273 | external | accepted |  |\n| EX008 | cmd/server/main.go:141 | external | accepted |  |\n| EX005 | web/views/cart.html:40 | inSource | rejected | test data only |\n| EX002 | scripts/deploy.sh:226 | external | accepted | test data only |\n| EX008 | \\(no location\\) | inSource | accepted |  |\n| EX004 | lib/db/query.py:125 | external | accepted | test data only |\n| EX004 | \\(no location\\) | external | accepted | kept for API compatibility |\n| EX001 | src/legacy/report\\_builder.cs:25 | external | accepted |  |\n| EX004 | web/views/cart.html:128 | inSource | accepted | test data only |\n| EX001 | cmd/server/main.go:123 | external | rejected | test data only |\n| EX005 | src/legacy/report\\_builder.cs:199 | inSource | accepted | test data only |\n| EX001 | \\(no location\\) | external | underReview | false positive |\n| EX004 | cmd/server/main.go:183 | external | accepted | false positive |\n| EX003 | src/api/orders.ts:209 | external | rejected |  |\n| EX006 | cmd/server/main.go | inSource | rejected | test data only |\n| EX008 | web/views/cart.html:317 | inSource | accepted |  |\n| EX004 | src/legacy/report\\_builder.cs:217 | inSource | accepted |  |\n| EX008 | scripts/deploy.sh:30 | external | underReview | false positive |\n| EX004 | src/legacy/report\\_builder.cs | inSource | accepted | test data only |\n| EX001 | src/api/orders.ts | external | rejected | false positive |\n| EX007 | src/util.js:301 | inSource | accepted |  |\n| EX007 | web/views/cart.html:72 | inSource | rejected |  |\n| EX003 | src/app.js:287 | external | rejected | test data only |\n| EX002 | src/app.js:111 | external | accepted |  |\n| EX002 | cmd/server/main.go:334 | external | accepted | test data only |\n| EX002 | src/util.js:271 | external | accepted |  |\n| EX007 | scripts/deploy.sh:295 | external | accepted | test data only |\n| EX008 | scripts/deploy.sh:136 | inSource | rejected | test data only |\n| EX004 | src/api/orders.ts:316 | external | accepted | false positive |\n| EX004 | src/api/orders.ts:312 | external | accepted |  |\n| EX004 | src/app.js:386 | external | accepted |  |\n| EX001 | \\(no location\\) | external | accepted | kept for API compatibility |\n| EX007 | lib/db/query.py:336 | external | underReview | false positive |\n| EX008 | src/app.js:213 | inSource | rejected |  |\n| EX005 | \\(no location\\) | external | underReview | kept for API compatibility |\n| EX001 | src/app.js:374 | external | accepted |  |\n| EX006 | scripts/deploy.sh:121 | inSource | rejected | kept for API compatibility |\n| EX001 | scripts/deploy.sh:382 | inSource | rejected |  |\n| EX005 | src/util.js:364 | external | accepted |  |\n| EX008 | scripts/deploy.sh:47 | external | accepted |  |\n| EX003 | web/views/cart.html:64 | external | accepted |  |"
+  }
+ },
+ "26-many-rules.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n200 results from 1 run (Example Analyzer 9.0.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 65 |\n| warning | 70 |\n| note | 65 |\n\n0 suppressed results.\n\n40 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/f0.js | 5 | 12 | 6 | 23 |\n| src/f1.js | 6 | 7 | 10 | 23 |\n| src/f2.js | 10 | 4 | 8 | 22 |\n| src/f3.js | 9 | 7 | 6 | 22 |\n| src/f4.js | 7 | 10 | 5 | 22 |\n| src/f5.js | 4 | 11 | 7 | 22 |\n| src/f6.js | 7 | 6 | 9 | 22 |\n| src/f7.js | 10 | 4 | 8 | 22 |\n| src/f8.js | 7 | 9 | 6 | 22 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| R000 | Rule0 | note | 5 |  |\n| R001 | Rule1 | note | 5 |  |\n| R002 | Rule2 | warning | 5 |  |\n| R003 | Rule3 | note | 5 |  |\n| R004 | Rule4 | error | 5 |  |\n| R005 | Rule5 | warning | 5 |  |\n| R006 | Rule6 | warning | 5 |  |\n| R007 | Rule7 | note | 5 |  |\n| R008 | Rule8 | note | 5 |  |\n| R009 | Rule9 | error | 5 |  |\n| R010 | Rule10 | note | 5 |  |\n| R011 | Rule11 | warning | 5 |  |\n| R012 | Rule12 | note | 5 |  |\n| R013 | Rule13 | error | 5 |  |\n| R014 | Rule14 | warning | 5 |  |\n| R015 | Rule15 | warning | 5 |  |\n| R016 | Rule16 | error | 5 |  |\n| R017 | Rule17 | error | 5 |  |\n| R018 | Rule18 | error | 5 |  |\n| R019 | Rule19 | note | 5 |  |\n| R020 | Rule20 | note | 5 |  |\n| R021 | Rule21 | error | 5 |  |\n| R022 | Rule22 | error | 5 |  |\n| R023 | Rule23 | warning | 5 |  |\n| R024 | Rule24 | note | 5 |  |\n\nShowing the 25 most frequent of 40 rules."
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "27-extensions-rules.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n4 results from 1 run (Example QL 2.20.1).\n\n| Level | Results |\n| --- | ---: |\n| error | 2 |\n| warning | 2 |\n\n0 suppressed results.\n\n3 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| \\(no location\\) | 0 | 2 | 0 | 2 |\n| lib/db/query.py | 1 | 0 | 0 | 1 |\n| src/app.js | 1 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX005 | WeakHash | warning | 2 | Weak hash algorithm |\n| EX004 | SqlConcat | error | 1 | SQL built by string concatenation |\n| EX006 | HardcodedSecret | error | 1 | Hard-coded credential |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "28-all-suppressed.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n2 results from 1 run (Example Analyzer 1.0.0).\n\nEvery result in this log is suppressed (see Show Suppression Audit).\n\n2 suppressed results.\n\n0 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\nEvery result in this log is suppressed (see Show Suppression Audit)."
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\nEvery result in this log is suppressed (see Show Suppression Audit)."
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n2 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX001 | \\(no location\\) | inSource | accepted |  |\n| EX002 | \\(no location\\) | external | accepted | test data |"
+  }
+ },
+ "29-suppression-states.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n4 results from 1 run (Example Analyzer 1.0.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 2 |\n\n2 suppressed results.\n\n1 rule triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| \\(no location\\) | 2 | 0 | 0 | 2 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 | NoEval | error | 2 | Avoid eval |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n2 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX001 | \\(no location\\) | external | accepted |  |\n| EX001 | \\(no location\\) | external | underReview |  |\n| EX001 | \\(no location\\) | external | rejected |  |\n| EX001 | \\(no location\\) | external | accepted |  |"
+  }
+ },
+ "30-baseline-absent-only.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n2 results from 1 run (Example Analyzer 1.0.0).\n\n| Level | Results |\n| --- | ---: |\n| warning | 2 |\n\n0 suppressed results.\n\n1 rule triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| \\(no location\\) | 0 | 2 | 0 | 2 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX003 |  | warning | 2 |  |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n0 new results.\n\n1 result absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "31-kinds.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n6 results from 1 run (Example Analyzer 1.0.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 1 |\n| none | 5 |\n\n0 suppressed results.\n\n1 rule triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| \\(no location\\) | 1 | 0 | 0 | 6 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 | NoEval | error | 6 | Avoid eval |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "32-empty-runs.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\nThe SARIF log contains no results."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\nThe SARIF log contains no results."
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\nThe SARIF log contains no results."
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThe SARIF log contains no results."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nThe SARIF log contains no results."
+  }
+ },
+ "33-runs-without-results.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\nThe SARIF log contains no results."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\nThe SARIF log contains no results."
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\nThe SARIF log contains no results."
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThe SARIF log contains no results."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nThe SARIF log contains no results."
+  }
+ },
+ "34-no-runs.sarif": {
+  "reportSummary": {
+   "startsWith": "# SARIF Summary\n\nThis file is not a valid SARIF log"
+  },
+  "reportResultsByFile": {
+   "startsWith": "# Results by File\n\nThis file is not a valid SARIF log"
+  },
+  "reportTopRules": {
+   "startsWith": "# Top Rules\n\nThis file is not a valid SARIF log"
+  },
+  "reportNewResults": {
+   "startsWith": "# New Results\n\nThis file is not a valid SARIF log"
+  },
+  "reportSuppressions": {
+   "startsWith": "# Suppressions\n\nThis file is not a valid SARIF log"
+  }
+ },
+ "35-not-json.sarif": {
+  "reportSummary": {
+   "startsWith": "# SARIF Summary\n\nThis file is not a valid SARIF log"
+  },
+  "reportResultsByFile": {
+   "startsWith": "# Results by File\n\nThis file is not a valid SARIF log"
+  },
+  "reportTopRules": {
+   "startsWith": "# Top Rules\n\nThis file is not a valid SARIF log"
+  },
+  "reportNewResults": {
+   "startsWith": "# New Results\n\nThis file is not a valid SARIF log"
+  },
+  "reportSuppressions": {
+   "startsWith": "# Suppressions\n\nThis file is not a valid SARIF log"
+  }
+ },
+ "36-array-top.sarif": {
+  "reportSummary": {
+   "startsWith": "# SARIF Summary\n\nThis file is not a valid SARIF log"
+  },
+  "reportResultsByFile": {
+   "startsWith": "# Results by File\n\nThis file is not a valid SARIF log"
+  },
+  "reportTopRules": {
+   "startsWith": "# Top Rules\n\nThis file is not a valid SARIF log"
+  },
+  "reportNewResults": {
+   "startsWith": "# New Results\n\nThis file is not a valid SARIF log"
+  },
+  "reportSuppressions": {
+   "startsWith": "# Suppressions\n\nThis file is not a valid SARIF log"
+  }
+ },
+ "37-junk-types.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n3 results from 5 runs (unknown, unknown, unknown, unknown, unknown).\n\n| Level | Results |\n| --- | ---: |\n| error | 1 |\n| warning | 2 |\n\n0 suppressed results.\n\n3 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| \\(no location\\) | 0 | 2 | 0 | 2 |\n| x.js | 1 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| (no rule id) |  | warning | 1 |  |\n| A |  | warning | 1 |  |\n| B |  | warning | 1 |  |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n0 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n|  | \\(no location\\) |  |  |  |"
+  }
+ },
+ "38-prototype-names.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n5 results from 1 run (\\_\\_proto\\_\\_ constructor).\n\n| Level | Results |\n| --- | ---: |\n| warning | 5 |\n\n0 suppressed results.\n\n5 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| \\_\\_proto\\_\\_ | 0 | 1 | 0 | 1 |\n| constructor | 0 | 1 | 0 | 1 |\n| hasOwnProperty | 0 | 1 | 0 | 1 |\n| toString | 0 | 1 | 0 | 1 |\n| valueOf | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| \\_\\_proto\\_\\_ | \\_\\_proto\\_\\_ | warning | 1 | \\_\\_proto\\_\\_ |\n| constructor | constructor | warning | 1 | constructor |\n| hasOwnProperty | hasOwnProperty | warning | 1 | hasOwnProperty |\n| toString | toString | warning | 1 | toString |\n| valueOf |  | warning | 1 |  |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "39-crlf.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n6 results from 1 run (Example Analyzer 2.3.0).\n\n| Level | Results |\n| --- | ---: |\n| error | 2 |\n| warning | 1 |\n| none | 3 |\n\n0 suppressed results.\n\n5 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| cmd/server/main.go | 1 | 0 | 0 | 2 |\n| \\(no location\\) | 0 | 0 | 0 | 1 |\n| lib/db/query.py | 0 | 1 | 0 | 1 |\n| scripts/deploy.sh | 0 | 0 | 0 | 1 |\n| src/util.js | 1 | 0 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX008 | Todo | none | 2 | Leftover TODO comment |\n| EX001 | NoEval | error | 1 | Avoid eval |\n| EX003 | LongLine | warning | 1 | Line too long |\n| EX006 | HardcodedSecret | error | 1 | Hard-coded credential |\n| EX007 | MissingCsrf | warning | 1 | Form without CSRF token |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n2 new results.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| none | EX008 | \\(no location\\) | leftover todo comment here |\n| error | EX001 | src/util.js:52 | avoid eval here |\n\n1 result absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ },
+ "40-bom.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n5 results from 1 run (Example Analyzer 2.3.0).\n\n| Level | Results |\n| --- | ---: |\n| warning | 4 |\n\n1 suppressed result.\n\n4 rules triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/api/orders.ts | 0 | 3 | 0 | 3 |\n| lib/db/query.py | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX002 | UnusedVar | note | 1 | Unused variable |\n| EX003 | LongLine | warning | 1 | Line too long |\n| EX005 | WeakHash | warning | 1 | Weak hash algorithm |\n| EX007 | MissingCsrf | warning | 1 | Form without CSRF token |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n1 suppressed result.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| EX002 | src/api/orders.ts:22 | inSource | accepted |  |"
+  }
+ },
+ "41-markdown-in-values.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n1 result from 1 run (Scan \\| \\*bold\\* \\<b\\>1\\</b\\>).\n\n| Level | Results |\n| --- | ---: |\n| warning | 1 |\n\n0 suppressed results.\n\n1 rule triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| src/a\\|b\\_\\[c\\].js | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| X\\|1 | \\[link\\]\\(https\\:\\/\\/evil.test\\) | warning | 1 | \\$x\\$ and \\`code\\` next line |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\n1 new result.\n\n| Level | Rule | Location | Message |\n| --- | --- | --- | --- |\n| warning | X\\|1 | src/a\\|b\\_\\[c\\].js:2 | \\<img src=https\\:\\/\\/evil.test/i.png\\> \\| pipe |\n\n0 results absent since the baseline."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\n0 suppressed results.\n\n| Rule | Location | Kind | Status | Justification |\n| --- | --- | --- | --- | --- |\n| X\\|1 | src/a\\|b\\_\\[c\\].js:2 | inSource | underReview | \\*\\*why\\*\\* www\\.evil.test |"
+  }
+ },
+ "42-windows-file-uri.sarif": {
+  "reportSummary": {
+   "exact": "# SARIF Summary\n\n3 results from 1 run (Example Analyzer 1.0.0).\n\n| Level | Results |\n| --- | ---: |\n| warning | 3 |\n\n0 suppressed results.\n\n1 rule triggered."
+  },
+  "reportResultsByFile": {
+   "exact": "# Results by File\n\n| File | Errors | Warnings | Notes | Total |\n| --- | ---: | ---: | ---: | ---: |\n| /bad%E0%A4%A.js | 0 | 1 | 0 | 1 |\n| /home/dev/repo/x.js | 0 | 1 | 0 | 1 |\n| D:/repo/src/a b.js | 0 | 1 | 0 | 1 |"
+  },
+  "reportTopRules": {
+   "exact": "# Top Rules\n\n| Rule | Name | Default level | Results | Description |\n| --- | --- | --- | ---: | --- |\n| EX001 |  | warning | 3 |  |"
+  },
+  "reportNewResults": {
+   "exact": "# New Results\n\nThis log has no baseline information (baselineState)."
+  },
+  "reportSuppressions": {
+   "exact": "# Suppressions\n\nNo suppressions in this log."
+  }
+ }
+}
