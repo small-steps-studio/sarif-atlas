@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "__proto__",
+          "version": "constructor",
+          "rules": [
+            {
+              "id": "constructor",
+              "name": "constructor",
+              "shortDescription": {
+                "text": "constructor"
+              }
+            },
+            {
+              "id": "__proto__",
+              "name": "__proto__",
+              "shortDescription": {
+                "text": "__proto__"
+              }
+            },
+            {
+              "id": "toString",
+              "name": "toString",
+              "shortDescription": {
+                "text": "toString"
+              }
+            },
+            {
+              "id": "hasOwnProperty",
+              "name": "hasOwnProperty",
+              "shortDescription": {
+                "text": "hasOwnProperty"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "constructor",
+          "message": {
+            "text": "constructor"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "constructor"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "__proto__",
+          "message": {
+            "text": "__proto__"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "__proto__"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "toString",
+          "message": {
+            "text": "toString"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "toString"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "hasOwnProperty",
+          "message": {
+            "text": "hasOwnProperty"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "hasOwnProperty"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "valueOf",
+          "message": {
+            "text": "valueOf"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "valueOf"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "version": "2.1.0",
+  "runs": [
+    null,
+    5,
+    "x",
+    {
+      "tool": "x",
+      "results": "y"
+    },
+    {
+      "tool": {
+        "driver": {
+          "name": 5,
+          "version": {},
+          "rules": "z"
+        }
+      },
+      "results": [
+        null,
+        3,
+        {
+          "ruleId": 7,
+          "ruleIndex": "0",
+          "level": "fatal",
+          "kind": 4,
+          "message": "text",
+          "locations": "x",
+          "suppressions": [
+            null,
+            "x",
+            {
+              "status": 5
+            }
+          ],
+          "baselineState": 9
+        },
+        {
+          "ruleId": "A",
+          "locations": [
+            null,
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": 5
+                },
+                "region": {
+                  "startLine": -2
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "B",
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "x.js"
+                },
+                "region": {
+                  "startLine": "ten"
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": 12
+          }
+        }
+      ]
+    }
+  ]
+}

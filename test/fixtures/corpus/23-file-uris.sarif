@@ -1,0 +1,317 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Example Analyzer",
+          "version": "2.5.0",
+          "rules": [
+            {
+              "id": "EX001",
+              "name": "NoEval",
+              "shortDescription": {
+                "text": "Avoid eval"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            },
+            {
+              "id": "EX002",
+              "name": "UnusedVar",
+              "shortDescription": {
+                "text": "Unused variable"
+              },
+              "defaultConfiguration": {
+                "level": "note"
+              }
+            },
+            {
+              "id": "EX003",
+              "name": "LongLine",
+              "shortDescription": {
+                "text": "Line too long"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "EX004",
+              "name": "SqlConcat",
+              "shortDescription": {
+                "text": "SQL built by string concatenation"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            },
+            {
+              "id": "EX005",
+              "name": "WeakHash",
+              "shortDescription": {
+                "text": "Weak hash algorithm"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "EX006",
+              "name": "HardcodedSecret",
+              "shortDescription": {
+                "text": "Hard-coded credential"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            },
+            {
+              "id": "EX007",
+              "name": "MissingCsrf",
+              "shortDescription": {
+                "text": "Form without CSRF token"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            },
+            {
+              "id": "EX008",
+              "name": "Todo",
+              "shortDescription": {
+                "text": "Leftover TODO comment"
+              },
+              "defaultConfiguration": {
+                "level": "none"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "EX002",
+          "message": {
+            "text": "unused variable here"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/web/views/cart.html"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX005",
+          "message": {
+            "text": "weak hash algorithm here"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/src/app.js"
+                },
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 22
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/src/legacy/report_builder.cs"
+                },
+                "region": {
+                  "startLine": 234,
+                  "startColumn": 16
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/src/api/orders.ts"
+                },
+                "region": {
+                  "startLine": 378,
+                  "startColumn": 52
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/src/api/orders.ts"
+                },
+                "region": {
+                  "startLine": 139,
+                  "startColumn": 15
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX002",
+          "message": {
+            "text": "unused variable here"
+          },
+          "level": "none",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/src/api/orders.ts"
+                },
+                "region": {
+                  "startLine": 81,
+                  "startColumn": 10
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX004",
+          "message": {
+            "text": "sql built by string concatenation here"
+          },
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/web/views/cart.html"
+                },
+                "region": {
+                  "startLine": 189,
+                  "startColumn": 38
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX001",
+          "message": {
+            "text": "avoid eval here"
+          },
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/src/legacy/report_builder.cs"
+                },
+                "region": {
+                  "startLine": 267,
+                  "startColumn": 60
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX001",
+          "message": {
+            "text": "avoid eval here"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/src/legacy/report_builder.cs"
+                },
+                "region": {
+                  "startLine": 284,
+                  "startColumn": 30
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX007",
+          "message": {
+            "text": "form without csrf token here"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/src/api/orders.ts"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX003",
+          "message": {
+            "text": "line too long here"
+          },
+          "level": "none",
+          "suppressions": [
+            {
+              "kind": "external",
+              "status": "underReview",
+              "justification": "test data only"
+            }
+          ]
+        },
+        {
+          "ruleId": "EX004",
+          "message": {
+            "text": "sql built by string concatenation here"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/work/shop%20app/src/util.js"
+                },
+                "region": {
+                  "startLine": 246,
+                  "startColumn": 27
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

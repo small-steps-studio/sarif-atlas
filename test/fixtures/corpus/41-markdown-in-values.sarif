@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Scan | *bold*",
+          "version": "<b>1</b>",
+          "rules": [
+            {
+              "id": "X|1",
+              "name": "[link](https://evil.test)",
+              "shortDescription": {
+                "text": "$x$ and `code`\nnext line"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "X|1",
+          "baselineState": "new",
+          "message": {
+            "text": "<img src=https://evil.test/i.png> | pipe"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/a|b_[c].js"
+                },
+                "region": {
+                  "startLine": 2
+                }
+              }
+            }
+          ],
+          "suppressions": [
+            {
+              "kind": "inSource",
+              "status": "underReview",
+              "justification": "**why** www.evil.test"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

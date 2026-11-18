@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Example Analyzer",
+          "version": "1.0.0"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "EX001",
+          "message": {
+            "text": "a"
+          },
+          "suppressions": [
+            {
+              "kind": "inSource"
+            }
+          ]
+        },
+        {
+          "ruleId": "EX002",
+          "message": {
+            "text": "b"
+          },
+          "suppressions": [
+            {
+              "kind": "external",
+              "status": "accepted",
+              "justification": "test data"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

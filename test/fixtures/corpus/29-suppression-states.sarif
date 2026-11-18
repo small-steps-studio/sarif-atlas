@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Example Analyzer",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "EX001",
+              "name": "NoEval",
+              "shortDescription": {
+                "text": "Avoid eval"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "EX001",
+          "ruleIndex": 0,
+          "message": {
+            "text": "case 0"
+          },
+          "suppressions": [
+            {
+              "kind": "external",
+              "status": "accepted"
+            }
+          ]
+        },
+        {
+          "ruleId": "EX001",
+          "ruleIndex": 0,
+          "message": {
+            "text": "case 1"
+          },
+          "suppressions": [
+            {
+              "kind": "external",
+              "status": "underReview"
+            }
+          ]
+        },
+        {
+          "ruleId": "EX001",
+          "ruleIndex": 0,
+          "message": {
+            "text": "case 2"
+          },
+          "suppressions": [
+            {
+              "kind": "external",
+              "status": "rejected"
+            }
+          ]
+        },
+        {
+          "ruleId": "EX001",
+          "ruleIndex": 0,
+          "message": {
+            "text": "case 3"
+          },
+          "suppressions": [
+            {
+              "kind": "external"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

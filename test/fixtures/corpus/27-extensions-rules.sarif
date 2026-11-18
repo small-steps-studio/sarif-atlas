@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Example QL",
+          "semanticVersion": "2.20.1",
+          "version": "2.20.1"
+        },
+        "extensions": [
+          {
+            "name": "example/js-queries",
+            "rules": [
+              {
+                "id": "EX004",
+                "name": "SqlConcat",
+                "shortDescription": {
+                  "text": "SQL built by string concatenation"
+                },
+                "defaultConfiguration": {
+                  "level": "error"
+                }
+              },
+              {
+                "id": "EX006",
+                "name": "HardcodedSecret",
+                "shortDescription": {
+                  "text": "Hard-coded credential"
+                },
+                "defaultConfiguration": {
+                  "level": "error"
+                }
+              }
+            ]
+          },
+          {
+            "name": "example/extra",
+            "rules": [
+              {
+                "id": "EX005",
+                "name": "WeakHash",
+                "shortDescription": {
+                  "text": "Weak hash algorithm"
+                },
+                "defaultConfiguration": {
+                  "level": "warning"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "results": [
+        {
+          "ruleId": "EX004",
+          "rule": {
+            "id": "EX004",
+            "index": 0,
+            "toolComponent": {
+              "index": 0
+            }
+          },
+          "message": {
+            "text": "query built from user input"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/db/query.py",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 41
+                }
+              }
+            }
+          ]
+        },
+        {
+          "rule": {
+            "id": "EX006",
+            "index": 1,
+            "toolComponent": {
+              "index": 0
+            }
+          },
+          "message": {
+            "text": "password literal"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/app.js"
+                },
+                "region": {
+                  "startLine": 3
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "EX005",
+          "rule": {
+            "index": 0,
+            "toolComponent": {
+              "index": 1
+            }
+          },
+          "message": {
+            "text": "md5 used"
+          }
+        },
+        {
+          "ruleId": "EX005",
+          "rule": {
+            "index": 7,
+            "toolComponent": {
+              "index": 5
+            }
+          },
+          "message": {
+            "text": "dangling reference"
+          }
+        }
+      ]
+    }
+  ]
+}

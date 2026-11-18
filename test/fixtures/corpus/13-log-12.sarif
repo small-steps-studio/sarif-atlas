@@ -1,0 +1,901 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Example Analyzer",
+          "version": "2.6.0",
+          "rules": [
+            {
+              "id": "EX001",
+              "name": "NoEval",
+              "shortDescription": {
+                "text": "Avoid eval"
+              }
+            },
+            {
+              "id": "EX002",
+              "name": "UnusedVar",
+              "shortDescription": {
+                "text": "Unused variable"
+              }
+            },
+            {
+              "id": "EX003",
+              "name": "LongLine",
+              "shortDescription": {
+                "text": "Line too long"
+              }
+            },
+            {
+              "id": "EX004",
+              "name": "SqlConcat",
+              "shortDescription": {
+                "text": "SQL built by string concatenation"
+              }
+            },
+            {
+              "id": "EX005",
+              "name": "WeakHash",
+              "shortDescription": {
+                "text": "Weak hash algorithm"
+              }
+            },
+            {
+              "id": "EX006",
+              "name": "HardcodedSecret",
+              "shortDescription": {
+                "text": "Hard-coded credential"
+              }
+            },
+            {
+              "id": "EX007",
+              "name": "MissingCsrf",
+              "shortDescription": {
+                "text": "Form without CSRF token"
+              }
+            },
+            {
+              "id": "EX008",
+              "name": "Todo",
+              "shortDescription": {
+                "text": "Leftover TODO comment"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "EX001",
+          "message": {
+            "text": "avoid eval here"
+          },
+          "ruleIndex": 0,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/util.js"
+                },
+                "region": {
+                  "startLine": 261,
+                  "startColumn": 31
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "ruleIndex": 5,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/db/query.py"
+                },
+                "region": {
+                  "startLine": 396,
+                  "startColumn": 22
+                }
+              }
+            }
+          ],
+          "baselineState": "updated"
+        },
+        {
+          "ruleId": "EX008",
+          "message": {
+            "text": "leftover todo comment here"
+          },
+          "ruleIndex": 7,
+          "level": "none",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cmd/server/main.go"
+                }
+              }
+            }
+          ],
+          "baselineState": "absent",
+          "suppressions": [
+            {
+              "kind": "inSource",
+              "status": "underReview",
+              "justification": "false positive"
+            }
+          ]
+        },
+        {
+          "ruleId": "EX001",
+          "message": {
+            "text": "avoid eval here"
+          },
+          "ruleIndex": 0,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/legacy/report_builder.cs"
+                },
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 56
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX008",
+          "message": {
+            "text": "leftover todo comment here"
+          },
+          "ruleIndex": 7,
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/db/query.py"
+                },
+                "region": {
+                  "startLine": 291,
+                  "startColumn": 18
+                }
+              }
+            }
+          ],
+          "baselineState": "new"
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "ruleIndex": 5,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/db/query.py"
+                },
+                "region": {
+                  "startLine": 30,
+                  "startColumn": 50
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "ruleIndex": 5,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/legacy/report_builder.cs"
+                },
+                "region": {
+                  "startLine": 25,
+                  "startColumn": 30
+                }
+              }
+            }
+          ],
+          "baselineState": "new"
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "ruleIndex": 5,
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/deploy.sh"
+                },
+                "region": {
+                  "startLine": 164,
+                  "startColumn": 19
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX007",
+          "message": {
+            "text": "form without csrf token here"
+          },
+          "ruleIndex": 6,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/deploy.sh"
+                },
+                "region": {
+                  "startLine": 74,
+                  "startColumn": 26
+                }
+              }
+            }
+          ],
+          "baselineState": "new"
+        },
+        {
+          "ruleId": "EX004",
+          "message": {
+            "text": "sql built by string concatenation here"
+          },
+          "ruleIndex": 3,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cmd/server/main.go"
+                },
+                "region": {
+                  "startLine": 184,
+                  "startColumn": 21
+                }
+              }
+            }
+          ],
+          "baselineState": "new",
+          "suppressions": [
+            {
+              "kind": "external",
+              "justification": "false positive"
+            }
+          ]
+        },
+        {
+          "ruleId": "EX003",
+          "message": {
+            "text": "line too long here"
+          },
+          "ruleIndex": 2,
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/deploy.sh"
+                },
+                "region": {
+                  "startLine": 370,
+                  "startColumn": 30
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX004",
+          "message": {
+            "text": "sql built by string concatenation here"
+          },
+          "ruleIndex": 3,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/db/query.py"
+                },
+                "region": {
+                  "startLine": 393,
+                  "startColumn": 11
+                }
+              }
+            }
+          ],
+          "baselineState": "new"
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "ruleIndex": 5,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/app.js"
+                },
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 60
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX004",
+          "message": {
+            "text": "sql built by string concatenation here"
+          },
+          "ruleIndex": 3,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/deploy.sh"
+                }
+              }
+            }
+          ],
+          "baselineState": "new"
+        },
+        {
+          "ruleId": "EX008",
+          "message": {
+            "text": "leftover todo comment here"
+          },
+          "ruleIndex": 7,
+          "baselineState": "absent"
+        },
+        {
+          "ruleId": "EX007",
+          "message": {
+            "text": "form without csrf token here"
+          },
+          "ruleIndex": 6,
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/app.js"
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX008",
+          "message": {
+            "text": "leftover todo comment here"
+          },
+          "ruleIndex": 7,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cmd/server/main.go"
+                },
+                "region": {
+                  "startLine": 107,
+                  "startColumn": 12
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX004",
+          "message": {
+            "text": "sql built by string concatenation here"
+          },
+          "ruleIndex": 3,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cmd/server/main.go"
+                },
+                "region": {
+                  "startLine": 323,
+                  "startColumn": 6
+                }
+              }
+            }
+          ],
+          "baselineState": "updated"
+        },
+        {
+          "ruleId": "EX007",
+          "message": {
+            "text": "form without csrf token here"
+          },
+          "ruleIndex": 6,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/deploy.sh"
+                },
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 18
+                }
+              }
+            }
+          ],
+          "baselineState": "new"
+        },
+        {
+          "ruleId": "EX003",
+          "message": {
+            "text": "line too long here"
+          },
+          "ruleIndex": 2,
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/app.js"
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX003",
+          "message": {
+            "text": "line too long here"
+          },
+          "ruleIndex": 2,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/app.js"
+                },
+                "region": {
+                  "startLine": 302,
+                  "startColumn": 41
+                }
+              }
+            }
+          ],
+          "baselineState": "updated"
+        },
+        {
+          "ruleId": "EX005",
+          "message": {
+            "text": "weak hash algorithm here"
+          },
+          "ruleIndex": 4,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/db/query.py"
+                },
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 42
+                }
+              }
+            }
+          ],
+          "baselineState": "updated"
+        },
+        {
+          "ruleId": "EX005",
+          "message": {
+            "text": "weak hash algorithm here"
+          },
+          "ruleIndex": 4,
+          "level": "none",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/util.js"
+                },
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 18
+                }
+              }
+            }
+          ],
+          "baselineState": "absent"
+        },
+        {
+          "ruleId": "EX007",
+          "message": {
+            "text": "form without csrf token here"
+          },
+          "ruleIndex": 6,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/deploy.sh"
+                }
+              }
+            }
+          ],
+          "baselineState": "new"
+        },
+        {
+          "ruleId": "EX002",
+          "message": {
+            "text": "unused variable here"
+          },
+          "ruleIndex": 1,
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/db/query.py"
+                },
+                "region": {
+                  "startLine": 109,
+                  "startColumn": 44
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX007",
+          "message": {
+            "text": "form without csrf token here"
+          },
+          "ruleIndex": 6,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cmd/server/main.go"
+                },
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 32
+                }
+              }
+            }
+          ],
+          "baselineState": "absent"
+        },
+        {
+          "ruleId": "EX005",
+          "message": {
+            "text": "weak hash algorithm here"
+          },
+          "ruleIndex": 4,
+          "level": "error",
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX001",
+          "message": {
+            "text": "avoid eval here"
+          },
+          "ruleIndex": 0,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/app.js"
+                },
+                "region": {
+                  "startLine": 360,
+                  "startColumn": 55
+                }
+              }
+            }
+          ],
+          "baselineState": "absent"
+        },
+        {
+          "ruleId": "EX003",
+          "message": {
+            "text": "line too long here"
+          },
+          "ruleIndex": 2,
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/util.js"
+                },
+                "region": {
+                  "startLine": 355,
+                  "startColumn": 25
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "ruleIndex": 5,
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "cmd/server/main.go"
+                },
+                "region": {
+                  "startLine": 129,
+                  "startColumn": 54
+                }
+              }
+            }
+          ],
+          "baselineState": "new"
+        },
+        {
+          "ruleId": "EX007",
+          "message": {
+            "text": "form without csrf token here"
+          },
+          "ruleIndex": 6,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/legacy/report_builder.cs"
+                },
+                "region": {
+                  "startLine": 168,
+                  "startColumn": 17
+                }
+              }
+            }
+          ],
+          "baselineState": "absent",
+          "suppressions": [
+            {
+              "kind": "inSource",
+              "status": "rejected",
+              "justification": "false positive"
+            }
+          ]
+        },
+        {
+          "ruleId": "EX008",
+          "message": {
+            "text": "leftover todo comment here"
+          },
+          "ruleIndex": 7,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/db/query.py"
+                },
+                "region": {
+                  "startLine": 185,
+                  "startColumn": 59
+                }
+              }
+            }
+          ],
+          "baselineState": "absent"
+        },
+        {
+          "ruleId": "EX001",
+          "message": {
+            "text": "avoid eval here"
+          },
+          "ruleIndex": 0,
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "lib/db/query.py"
+                }
+              }
+            }
+          ],
+          "baselineState": "absent"
+        },
+        {
+          "ruleId": "EX002",
+          "message": {
+            "text": "unused variable here"
+          },
+          "ruleIndex": 1,
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/api/orders.ts"
+                },
+                "region": {
+                  "startLine": 219,
+                  "startColumn": 60
+                }
+              }
+            }
+          ],
+          "baselineState": "updated"
+        },
+        {
+          "ruleId": "EX006",
+          "message": {
+            "text": "hard-coded credential here"
+          },
+          "ruleIndex": 5,
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX001",
+          "message": {
+            "text": "avoid eval here"
+          },
+          "ruleIndex": 0,
+          "kind": "informational",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/deploy.sh"
+                },
+                "region": {
+                  "startLine": 158,
+                  "startColumn": 51
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX002",
+          "message": {
+            "text": "unused variable here"
+          },
+          "ruleIndex": 1,
+          "baselineState": "new",
+          "suppressions": [
+            {
+              "kind": "inSource",
+              "status": "accepted",
+              "justification": "test data only"
+            }
+          ]
+        },
+        {
+          "ruleId": "EX003",
+          "message": {
+            "text": "line too long here"
+          },
+          "ruleIndex": 2,
+          "level": "none",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/app.js"
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX004",
+          "message": {
+            "text": "sql built by string concatenation here"
+          },
+          "ruleIndex": 3,
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "web/views/cart.html"
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX007",
+          "message": {
+            "text": "form without csrf token here"
+          },
+          "ruleIndex": 6,
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "scripts/deploy.sh"
+                },
+                "region": {
+                  "startLine": 388,
+                  "startColumn": 25
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged"
+        },
+        {
+          "ruleId": "EX008",
+          "message": {
+            "text": "leftover todo comment here"
+          },
+          "ruleIndex": 7,
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "web/views/cart.html"
+                },
+                "region": {
+                  "startLine": 374,
+                  "startColumn": 40
+                }
+              }
+            }
+          ],
+          "baselineState": "unchanged",
+          "suppressions": [
+            {
+              "kind": "external",
+              "status": "accepted"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

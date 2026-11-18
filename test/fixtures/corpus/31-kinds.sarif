@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Example Analyzer",
+          "version": "1.0.0",
+          "rules": [
+            {
+              "id": "EX001",
+              "name": "NoEval",
+              "shortDescription": {
+                "text": "Avoid eval"
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "EX001",
+          "kind": "fail",
+          "message": {
+            "text": "fail"
+          }
+        },
+        {
+          "ruleId": "EX001",
+          "kind": "pass",
+          "message": {
+            "text": "pass"
+          }
+        },
+        {
+          "ruleId": "EX001",
+          "kind": "review",
+          "message": {
+            "text": "review"
+          }
+        },
+        {
+          "ruleId": "EX001",
+          "kind": "open",
+          "message": {
+            "text": "open"
+          }
+        },
+        {
+          "ruleId": "EX001",
+          "kind": "informational",
+          "message": {
+            "text": "informational"
+          }
+        },
+        {
+          "ruleId": "EX001",
+          "kind": "notApplicable",
+          "message": {
+            "text": "notApplicable"
+          }
+        }
+      ]
+    }
+  ]
+}
